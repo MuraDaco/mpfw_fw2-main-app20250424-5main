@@ -1,0 +1,509 @@
+Last login: Wed Jul 16 05:41:22 on ttys006
+/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp/mpfwsh_start.sh ; exit;
+work@umtiefs-Mac-mini ~ % /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp/mpfwsh_start.sh ; exit;
+dbg msg on stderr -> OK ---- "/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code" is a valid mpfw_code path: "cmake" subdirectroy exists
+Wed Jul 16 11:34:35 CEST 2025
+work@umtiefs-Mac-mini mpfw_code % build_total.sh 
+dbg msg - build_total.sh -> No "main name app" selected
+work@umtiefs-Mac-mini mpfw_code % build_chk.sh  
+dbg msg - build_chk.sh -> stm_20230420
+dbg msg - build_chk.sh -> - stm -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> stm_20230424
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - stm -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> stm_20230501
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> stm_20230504
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> stm_20230505
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> stm_20230516
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> stm_20230520
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20221229
+dbg msg - build_chk.sh -> - mac -> rls / apps -> tst_20221206
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - nxp -> rls / apps -> tst_20221206
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20230522
+dbg msg - build_chk.sh -> - mac -> rls / apps -> tst_20221206
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - nxp -> rls / apps -> tst_20221206
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls / apps -> tst_20221206
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20230703main
+dbg msg - build_chk.sh -> - mac -> rls / apps -> tst_20230703app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - nxp -> rls / apps -> tst_20230703app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls / apps -> tst_20230703app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20230810main
+dbg msg - build_chk.sh -> - mac -> rls / apps -> tst_20230810app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - nxp -> rls / apps -> tst_20230810app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls / apps -> tst_20230810app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20240203main
+dbg msg - build_chk.sh -> - mac -> rls / apps -> tst_20240203app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - nxp -> rls / apps -> tst_20240203app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls / apps -> tst_20240203app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20240317main
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls / apps -> tst_20240317app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> tst_20240619main
+dbg msg - build_chk.sh -> - mac -> rls / apps -> tst_20240619app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - nxp -> rls / apps -> tst_20240619app
+dbg msg - build_chk.sh -> OK
+dbg msg - build_chk.sh -> - stm32f769_disco -> rls / apps -> tst_20240619app
+dbg msg - build_chk.sh -> OK
+work@umtiefs-Mac-mini mpfw_code % build_total.sh nxp tst_20240619app
+param_type:  platform
+param_value: nxp
+param_type:  apps
+param_value: tst_20240619app
+dbg msg - build_total.sh -> OK ---- "/Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin" is a valid TOOLCHAIN path
+dbg msg - build_total.sh -> No "main name app" selected
+work@umtiefs-Mac-mini mpfw_code % build_total.sh nxp tst_20240619app tst_20240619main
+param_type:  platform
+param_value: nxp
+param_type:  apps
+param_value: tst_20240619app
+param_type:  main
+param_value: tst_20240619main
+dbg msg - build_total.sh -> OK ---- "/Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin" is a valid TOOLCHAIN path
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           nxp
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_NXP=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      
+
+-- Start super-project CMAkeLists.txt
+-- TOOLCHAIN - ASM:                  arm-none-eabi-gcc
+-- TOOLCHAIN - C:                    /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin/arm-none-eabi-gcc
+-- TOOLCHAIN - C++:                  /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin/arm-none-eabi-g++
+-- ---- debug libpower_hardabi.a directory </libs/mpfw_code_libs_sdk_nxp/src/v_05>
+-- ---- end   section of <module_libs_sdk_nxp> module 
+-- ---- end   section of <module_libs_fw2_core_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_resources> module 
+-- ---- end   section of <module_apps_tst_20240619app> module 
+-- ---- end   section of <module_main_tst_20240619main> module 
+-- End   super-project CMAkeLists.txt
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls
+[ 32%] Built target sdk_nxp_lib
+[ 50%] Built target fw2_lib
+[ 57%] Built target fw2_wp_kr_lib
+[ 61%] Built target fw2_wp_rs_lib
+[ 88%] Built target tst_20240619app_lib
+[ 89%] Linking CXX executable tst_20240619main.out
+Copying script link files into current build directory
+pwd: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls/main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02
+/Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ../../../../../../../libs/mpfw_code_libs_sdk_nxp/wsp/cmake/project/v_02/libsdk_nxp_lib.a(fsl_usart.c.obj): in function `USART_TransferHandleIRQ':
+/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_nxp/src/v_05/drivers/fsl_usart.c:857: undefined reference to `g_callback_protocol_functions'
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       17884 B       512 KB      3.41%
+     BOARD_FLASH:          0 GB        16 MB      0.00%
+      SRAM_UPPER:       15880 B       160 KB      9.69%
+           SRAMX:          0 GB        32 KB      0.00%
+         USB_RAM:          0 GB         8 KB      0.00%
+     BOARD_SDRAM:          0 GB        16 MB      0.00%
+collect2: error: ld returned 1 exit status
+make[2]: *** [main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/tst_20240619main.out] Error 1
+make[1]: *** [main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/all] Error 2
+make: *** [all] Error 2
+dbg msg - build_total.sh -> ERROR - cmake build command fail
+
+dbg msg - build_total.sh -> current directory (where current script is performed) is /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+
+
+dbg msg - build_total.sh -> the following commands have been executed under "/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code" directory
+dbg msg - build_total.sh -> cmake -S . -B main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake -DWP_PLATFORM_NXP=ON -DWP_PLATFORM_STR=nxp -DMAIN_NAME=tst_20240619main -DAPP_NAME=tst_20240619app -DCMAKE_BUILD_TYPE=Release 
+dbg msg - build_total.sh -> cmake --build main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls  -- -j 1
+
+dbg msg - build_total.sh -> ERROR - Test
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           nxp
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_NXP=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      
+
+work@umtiefs-Mac-mini mpfw_code % build_total.sh nxp tst_20240619app tst_20240619main
+param_type:  platform
+param_value: nxp
+param_type:  apps
+param_value: tst_20240619app
+param_type:  main
+param_value: tst_20240619main
+dbg msg - build_total.sh -> OK ---- "/Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin" is a valid TOOLCHAIN path
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           nxp
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_NXP=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      
+
+-- Start super-project CMAkeLists.txt
+-- TOOLCHAIN - ASM:                  arm-none-eabi-gcc
+-- TOOLCHAIN - C:                    /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin/arm-none-eabi-gcc
+-- TOOLCHAIN - C++:                  /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin/arm-none-eabi-g++
+-- ---- debug libpower_hardabi.a directory </libs/mpfw_code_libs_sdk_nxp/src/v_05>
+-- ---- end   section of <module_libs_sdk_nxp> module 
+-- ---- end   section of <module_libs_fw2_core_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_resources> module 
+-- ---- end   section of <module_apps_tst_20240619app> module 
+-- ---- end   section of <module_main_tst_20240619main> module 
+-- End   super-project CMAkeLists.txt
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls
+[ 32%] Built target sdk_nxp_lib
+[ 50%] Built target fw2_lib
+[ 57%] Built target fw2_wp_kr_lib
+[ 61%] Built target fw2_wp_rs_lib
+[ 88%] Built target tst_20240619app_lib
+[ 89%] Linking CXX executable tst_20240619main.out
+Copying script link files into current build directory
+pwd: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls/main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       18700 B       512 KB      3.57%
+     BOARD_FLASH:          0 GB        16 MB      0.00%
+      SRAM_UPPER:       15944 B       160 KB      9.73%
+           SRAMX:          0 GB        32 KB      0.00%
+         USB_RAM:          0 GB         8 KB      0.00%
+     BOARD_SDRAM:          0 GB        16 MB      0.00%
+   text	   data	    bss	    dec	    hex	filename
+  18508	    192	  15752	  34452	   8694	tst_20240619main.out
+nxp - Platform selected: nxp - Config fw2_lib folder:  - fw2 cmake files folder: ./libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05
+[100%] Built target tst_20240619main.out
+
+dbg msg - build_total.sh -> current directory (where current script is performed) is /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+
+
+dbg msg - build_total.sh -> the following commands have been executed under "/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code" directory
+dbg msg - build_total.sh -> cmake -S . -B main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake -DWP_PLATFORM_NXP=ON -DWP_PLATFORM_STR=nxp -DMAIN_NAME=tst_20240619main -DAPP_NAME=tst_20240619app -DCMAKE_BUILD_TYPE=Release 
+dbg msg - build_total.sh -> cmake --build main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/nxp/rls  -- -j 1
+
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           nxp
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_NXP=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      
+
+work@umtiefs-Mac-mini mpfw_code % build_total.sh stm32f769_disco tst_20240619app tst_20240619main
+param_type:  platform
+param_value: stm32f769_disco
+param_type:  apps
+param_value: tst_20240619app
+param_type:  main
+param_value: tst_20240619main
+dbg msg - build_total.sh -> OK ---- "/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin" is a valid TOOLCHAIN path
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           stm32f769_disco
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_STM32F769DISCO=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      
+
+-- Start super-project CMAkeLists.txt
+-- TOOLCHAIN - ASM:                  arm-none-eabi-gcc
+-- TOOLCHAIN - C:                    /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-gcc
+-- TOOLCHAIN - C++:                  /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++
+-- ---- end   section of <module_libs_sdk_stm32f769_disco> module 
+-- ---- end   section of <module_libs_fw2_core_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_resources> module 
+-- ---- end   section of <module_apps_tst_20240619app> module 
+-- ---- end   section of <module_main_tst_20240619main> module 
+-- End   super-project CMAkeLists.txt
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls
+[ 26%] Built target sdk_stm32f769_disco_lib
+[ 45%] Built target fw2_lib
+[ 53%] Built target fw2_wp_kr_lib
+[ 58%] Built target fw2_wp_rs_lib
+[ 87%] Built target tst_20240619app_lib
+[100%] Built target tst_20240619main.out
+
+dbg msg - build_total.sh -> current directory (where current script is performed) is /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+
+
+dbg msg - build_total.sh -> the following commands have been executed under "/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code" directory
+dbg msg - build_total.sh -> cmake -S . -B main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake -DWP_PLATFORM_STM32F769DISCO=ON -DWP_PLATFORM_STR=stm32f769_disco -DMAIN_NAME=tst_20240619main -DAPP_NAME=tst_20240619app -DCMAKE_BUILD_TYPE=Release 
+dbg msg - build_total.sh -> cmake --build main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls  -- -j 1
+
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           stm32f769_disco
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_STM32F769DISCO=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      
+
+work@umtiefs-Mac-mini mpfw_code % build_total.sh stm32f769_disco tst_20240619app tst_20240619main -r
+param_type:  platform
+param_value: stm32f769_disco
+param_type:  apps
+param_value: tst_20240619app
+param_type:  main
+param_value: tst_20240619main
+param_type:  option
+param_value: -r
+dbg msg - build_total.sh -> OK ---- "/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin" is a valid TOOLCHAIN path
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           stm32f769_disco
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_STM32F769DISCO=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      remove
+
+dbg msg - build_total.sh -> "/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls" directory is removed
+-- Start super-project CMAkeLists.txt
+-- The C compiler identification is GNU 10.3.1
+-- The CXX compiler identification is GNU 10.3.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- TOOLCHAIN - ASM:                  arm-none-eabi-gcc
+-- TOOLCHAIN - C:                    /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-gcc
+-- TOOLCHAIN - C++:                  /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++
+-- ---- end   section of <module_libs_sdk_stm32f769_disco> module 
+-- ---- end   section of <module_libs_fw2_core_core> module 
+-- ---- end   section of <module_libs_fw2_wrapper_core> module 
+-- The ASM compiler identification is GNU
+-- Found assembler: /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-gcc
+-- ---- end   section of <module_libs_fw2_wrapper_resources> module 
+-- ---- end   section of <module_apps_tst_20240619app> module 
+-- ---- end   section of <module_main_tst_20240619main> module 
+-- End   super-project CMAkeLists.txt
+-- Configuring done (0.6s)
+-- Generating done (0.1s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    WP_PLATFORM_STM32F769DISCO
+
+
+-- Build files have been written to: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls
+[  1%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.c.obj
+[  2%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c.obj
+[  3%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c.obj
+[  4%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c.obj
+[  5%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c.obj
+[  6%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c.obj
+[  7%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c.obj
+[  8%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c.obj
+[  9%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c.obj
+[ 10%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c.obj
+[ 11%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c.obj
+[ 12%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c.obj
+[ 13%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c.obj
+[ 14%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c.obj
+[ 15%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+[ 17%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+[ 18%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+[ 19%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+[ 20%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+[ 21%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+[ 22%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+[ 23%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+[ 24%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c.obj
+[ 25%] Building C object libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/v_05/CMakeFiles/sdk_stm32f769_disco_lib.dir/__/__/__/__/src/v_04/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+[ 26%] Linking C static library libsdk_stm32f769_disco_lib.a
+[ 26%] Built target sdk_stm32f769_disco_lib
+[ 27%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/kr/krEvent/v_02/krEvent.cpp.obj
+[ 28%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/kr/krInit/v_03/krInit.cpp.obj
+[ 29%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/kr/krInit/v_03/krInitStaticManager.cpp.obj
+[ 30%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/kr/krTimer/v_03/krTimer.cpp.obj
+[ 31%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/kr/krTimer/v_03/KrTimerManager.cpp.obj
+[ 32%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/sv/svSync/v_02/svSync.cpp.obj
+[ 34%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/sv/svState/v_02/svState.cpp.obj
+[ 35%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/sv/svStateMachine/v_03/svStateMachine.cpp.obj
+[ 36%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/sv/svStateMachine/v_03/svStateMachineManager.cpp.obj
+[ 37%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/uy/uyProtocol/v_03/uyProtocol.cpp.obj
+[ 38%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/uy/uyProtocol2/v_01/uyProtocol2.cpp.obj
+[ 39%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/dg/dgFormatDigit/v_01/dgFormatDigit.cpp.obj
+[ 40%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/dg/dgInterface/v_01/dgInterface.cpp.obj
+[ 41%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/tb/kr/krThread/v_04/krThreadTbl.cpp.obj
+[ 42%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/tb/kr/krInit/v_02/krInitStaticTbl.cpp.obj
+[ 43%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/tb/kr/krTimer/v_02/krTimerTbl.cpp.obj
+[ 44%] Building CXX object libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_05/CMakeFiles/fw2_lib.dir/__/__/__/__/src/tb/sv/svStateMachine/v_02/svStateMachineTbl.cpp.obj
+[ 45%] Linking CXX static library libfw2_lib.a
+[ 45%] Built target fw2_lib
+[ 46%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_03/CMakeFiles/fw2_wp_kr_lib.dir/__/__/__/__/__/stm32f769_disco/src/kr/krThread/v_04/krThread.cpp.obj
+[ 47%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_03/CMakeFiles/fw2_wp_kr_lib.dir/__/__/__/__/__/stm32f769_disco/src/kr/krThread/v_04/krThreadManager.cpp.obj
+[ 48%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_03/CMakeFiles/fw2_wp_kr_lib.dir/__/__/__/__/__/stm32f769_disco/src/sy/syThread/v_01/wp_sys_thread.cpp.obj
+[ 50%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_03/CMakeFiles/fw2_wp_kr_lib.dir/__/__/__/__/__/stm32f769_disco/src/tb/kr/krThread/v_01/KrThreadTbl.cpp.obj
+[ 51%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_03/CMakeFiles/fw2_wp_kr_lib.dir/__/__/__/__/__/stm32f769_disco/src/tb/kr/krThread/v_01/KrThreadCfg.cpp.obj
+[ 52%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_03/CMakeFiles/fw2_wp_kr_lib.dir/__/__/__/__/__/stm32f769_disco/src/tb/kr/krThread/v_01/KrThreadCfgTbl.cpp.obj
+[ 53%] Linking CXX static library libfw2_wp_kr_lib.a
+[ 53%] Built target fw2_wp_kr_lib
+[ 54%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_04/CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_07/rsSerial.cpp.obj
+[ 55%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_04/CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/src/tb/kr/krInit/v_02/krInitStaticTbl.cpp.obj
+[ 56%] Building C object libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_04/CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_07/sdk_uart_prv/sdk_uart_prv.c.obj
+[ 57%] Building CXX object libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_04/CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_07/rsSerialConnections.cpp.obj
+[ 58%] Linking CXX static library libfw2_wp_rs_lib.a
+[ 58%] Built target fw2_wp_rs_lib
+[ 59%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/kr/krThread/v_05/ap/ap_krThread02.cpp.obj
+[ 60%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/kr/krTimer/v_01/ap/apTestTimer01.cpp.obj
+[ 61%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/ap/tt_ap_svSync.cpp.obj
+[ 62%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mn/tt_mn_svSyncMain.cpp.obj
+[ 63%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mg/tt_mg_SyncManager.cpp.obj
+[ 64%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mg/tt_mg_SyncTbl.cpp.obj
+[ 65%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/ap/tt_ap_svSync_2.cpp.obj
+[ 67%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mn/tt_mn_svSyncMain_2.cpp.obj
+[ 68%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mg/tt_mg_SyncManager_2.cpp.obj
+[ 69%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mg/tt_mg_SyncTbl_2.cpp.obj
+[ 70%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/ap/tt_ap_svSync_3.cpp.obj
+[ 71%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mn/tt_mn_svSyncMain_3.cpp.obj
+[ 72%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mg/tt_mg_SyncManager_3.cpp.obj
+[ 73%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svSync/v_04/mg/tt_mg_SyncTbl_3.cpp.obj
+[ 74%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svState/v_01/ap/tt_ap_svState.cpp.obj
+[ 75%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svState/v_01/mn/tt_mn_svStateMain.cpp.obj
+[ 76%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svState/v_01/mg/tt_mg_StateManager.cpp.obj
+[ 77%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svState/v_01/mg/tt_mg_StateTbl.cpp.obj
+[ 78%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svStateMachine/v_01/ap/tt_ap_svStateMachine.cpp.obj
+[ 79%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/sv/svStateMachine/v_01/mn/tt_mn_svStateMachineMain.cpp.obj
+[ 80%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/tb/kr/krThread/v_03/app/krThreadTbl.cpp.obj
+[ 81%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/tb/kr/krInit/v_02/app/krInitStaticTbl.cpp.obj
+[ 82%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/tb/kr/krTimer/v_02/app/krTimerTbl.cpp.obj
+[ 84%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/tb/sv/svStateMachine/v_02/app/svStateMachineTbl.cpp.obj
+[ 85%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/tb/mn/tt_MainTbl.cpp.obj
+[ 86%] Building CXX object apps/mpfw_code_apps_tst_20240619app/wsp/cmake/project/v_02/CMakeFiles/tst_20240619app_lib.dir/__/__/__/__/src/mn/mg/tt_MainManager.cpp.obj
+[ 87%] Linking CXX static library libtst_20240619app_lib.a
+[ 87%] Built target tst_20240619app_lib
+[ 88%] Building ASM object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/startup/startup_stm32f769xx.s.obj
+[ 89%] Building CXX object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/main.cpp.obj
+[ 90%] Building C object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/freertos/freertos.c.obj
+[ 91%] Building C object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/interrupt/stm32f7xx_hal_timebase_tim.c.obj
+[ 92%] Building C object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/interrupt/stm32f7xx_it.c.obj
+[ 93%] Building C object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/startup/system_stm32f7xx.c.obj
+[ 94%] Building C object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/uart/stm32f7xx_hal_msp.c.obj
+[ 95%] Building CXX object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/common/tb/tb/kr/krThread/v_01/krThreadTbl.cpp.obj
+[ 96%] Building CXX object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/common/tb/tb/kr/krInit/v_01/krInitStaticTbl.cpp.obj
+[ 97%] Building CXX object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/common/tb/tb/kr/krTimer/v_01/krTimerTbl.cpp.obj
+[ 98%] Building CXX object main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02/CMakeFiles/tst_20240619main.out.dir/__/__/__/__/__/src/common/tb/tb/sv/svStateMachine/v_01/svStateMachineTbl.cpp.obj
+[100%] Linking CXX executable tst_20240619main.out
+Copying script link files into current build directory
+pwd: /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls/main/mpfw_code_main_tst_20240619main/wsp/cmake/project/common/v_02
+   text	   data	    bss	    dec	    hex	filename
+  19136	    248	   8172	  27556	   6ba4	tst_20240619main.out
+Copying executable file into ../../../../../../../../../../../cube/project/stm32f769_disco/tst_20240619main/Release directory
+Platform selected: stm32f769_disco
+[100%] Built target tst_20240619main.out
+
+dbg msg - build_total.sh -> current directory (where current script is performed) is /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+
+
+dbg msg - build_total.sh -> the following commands have been executed under "/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code" directory
+dbg msg - build_total.sh -> cmake -S . -B main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake -DWP_PLATFORM_STM32F769DISCO=ON -DWP_PLATFORM_STR=stm32f769_disco -DMAIN_NAME=tst_20240619main -DAPP_NAME=tst_20240619app -DCMAKE_BUILD_TYPE=Release 
+dbg msg - build_total.sh -> cmake --build main/mpfw_code_main_tst_20240619main/wsp/cmake/build_as_lib/stm32f769_disco/rls  -- -j 1
+
+
+dbg msg - build_total.sh -> PATH:               /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin:/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/scrp:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/.cabal/bin:/Users/work/.ghcup/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Little Snitch.app/Contents/Components:/Applications/VMware Fusion.app/Contents/Public:/Users/work/Applications/CMake.app/Contents/bin:/Users/work/Applications/CMake.app/Contents/bin
+dbg msg - build_total.sh -> main_name:          tst_20240619main
+dbg msg - build_total.sh -> apps_name:          tst_20240619app
+dbg msg - build_total.sh -> platform:           stm32f769_disco
+dbg msg - build_total.sh -> platform_cmake:     -DWP_PLATFORM_STM32F769DISCO=ON
+dbg msg - build_total.sh -> toolchain_cmake:    -DCMAKE_TOOLCHAIN_FILE=./cmake/arm-none-eabi-gcc.cmake
+dbg msg - build_total.sh -> build_type:         rls
+dbg msg - build_total.sh -> build_type_cmake:   -DCMAKE_BUILD_TYPE=Release
+dbg msg - build_total.sh -> scriptlink:         yes
+dbg msg - build_total.sh -> verbose_cmake:      
+dbg msg - build_total.sh -> clean_cmake:        
+dbg msg - build_total.sh -> remove option:      remove
+
+work@umtiefs-Mac-mini mpfw_code % quit
+zsh: command not found: quit
+work@umtiefs-Mac-mini mpfw_code % exit
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+Wed Jul 16 17:17:57 CEST 2025
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]
+

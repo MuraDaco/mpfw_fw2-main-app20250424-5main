@@ -1,0 +1,1485 @@
+
+    94	  repo__main/smdl/repo__prjs : smdl/mpfw_old
+    95	  repo__main/smdl/repo__prjs : smdl/ncurses
+    96	  repo__main/smdl/repo__prjs : smdl/serial_port/RS-232
+
+5
+result:   repo__main/smdl/repo__prjs/smdl/mpfw : code/mpfw_code
+dbg msg - obdash.sh -> Selected: code/mpfw_code
+
+dbg msg - obdash.sh -> Module info (Selected):
+dbg msg - obdash.sh -> repogroup_sel:      projects
+dbg msg - obdash.sh -> Module info (Retrived):
+dbg msg - obdash.sh -> toplevel:                /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw
+dbg msg - obdash.sh -> sm_path_abs:             /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+dbg msg - obdash.sh -> sm_path:                 code/mpfw_code
+
+dbg msg - obdash.sh -> URL info (Selected):
+dbg msg - obdash.sh -> URL info (Retrived):
+
+dbg msg - obdash.sh -> 2. Check the above list of parameter, then select your choice?
+Below the list of possible value:
+     1	Continue: It's all OK      -> perform the commands
+     2	Exit:     Wrong parameters -> stop di execution of current script
+
+1
+result: Continue: It's all OK      -> perform the commands
+dbg msg - obdash.sh -> Selected: Continue
+dbg msg - obdash.sh -> ===============
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl (new commits)
+	modified:   main/app20250424/layer/mpfw_fw2-main-app20250424-5main (modified content, untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	help/20260227_temporary.txt
+	help/20260227_temporary_2
+	help/20260227_temporary_3
+	help/20260227_temporary_4
+
+****************************************
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/layer/mpfw_fw2-fnct-base-0abst
+--->>>Entering 'fnct/base/layer/mpfw_fw2-fnct-base-4test'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/mpfw_fw2_fnct_base
+--->>>Entering 'fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst'
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-0abst
+--->>>Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-mac
+--->>>Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp
+--->>>Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-stm-stm32f769_disco'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-0abst
+--->>>Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-3real
+--->>>Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-0trdp
+--->>>Entering 'trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-1trdp'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+
+
+***************************************+
+
+Enumerating objects: 59, done.
+Counting objects: 100% (59/59), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (34/34), 4.25 KiB | 4.25 MiB/s, done.
+Total 34 (delta 13), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_code.git
+   8775c07..d25ad04  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "code/mpfw_code": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 96, done.
+Counting objects: 100% (95/95), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (42/42), done.
+Writing objects: 100% (57/57), 5.20 KiB | 2.60 MiB/s, done.
+Total 57 (delta 26), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-appl-app20250424-4appl.git
+   b6dfcc5..5cb9279  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.40 KiB | 1.40 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2_cmake.git
+   a34eaf4..2ef1aaa  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "cmake/mpfw_fw2_cmake": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 96, done.
+Counting objects: 100% (96/96), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (59/59), done.
+Writing objects: 100% (80/80), 15.08 KiB | 3.77 MiB/s, done.
+Total 80 (delta 32), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-base-0abst.git
+   c8e2ac3..5a6c0be  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/base/layer/mpfw_fw2-fnct-base-0abst": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (26/26), 2.61 KiB | 2.61 MiB/s, done.
+Total 26 (delta 9), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-base-4test.git
+   5909d66..38f37cc  main -> main
+branch 'main' set up to track 'origin/main'.
+dbg msg - func_module_push.sh -> OK - module "fnct/base/layer/mpfw_fw2-fnct-base-4test": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (45/45), 20.62 KiB | 5.15 MiB/s, done.
+Total 45 (delta 15), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-base_hw-0abst.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+dbg msg - func_module_push.sh -> OK - "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 54, done.
+Counting objects: 100% (54/54), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (37/37), 4.38 KiB | 4.38 MiB/s, done.
+Total 37 (delta 18), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-core-2wrpr.git
+   8f40799..be8c575  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/core/layer/mpfw_fw2-fnct-core-2wrpr": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 71, done.
+Counting objects: 100% (71/71), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (46/46), done.
+Writing objects: 100% (55/55), 14.23 KiB | 4.74 MiB/s, done.
+Total 55 (delta 23), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-core-3real.git
+   301fa20..4b34662  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/core/layer/mpfw_fw2-fnct-core-3real": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 55, done.
+Counting objects: 100% (55/55), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (47/47), 8.21 KiB | 4.11 MiB/s, done.
+Total 47 (delta 18), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-hw-0abst.git
+   ac2fb93..80dd61d  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/hw/layer/mpfw_fw2-fnct-hw-0abst": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (39/39), 6.37 KiB | 3.18 MiB/s, done.
+Total 39 (delta 18), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac.git
+   40a5821..f3d8ac4  main -> main
+branch 'main' set up to track 'origin/main'.
+dbg msg - func_module_push.sh -> OK - module "fnct/hw/layer/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 97, done.
+Counting objects: 100% (97/97), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (54/54), done.
+Writing objects: 100% (62/62), 14.85 KiB | 4.95 MiB/s, done.
+Total 62 (delta 29), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-hw-1trdp-sdk-mac.git
+   d066118..32007aa  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-mac": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (38/38), 20.25 KiB | 6.75 MiB/s, done.
+Total 38 (delta 10), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-hw-1trdp-sdk-nxp.git
+   1114263..2fc42a5  main -> main
+branch 'main' set up to track 'origin/main'.
+dbg msg - func_module_push.sh -> OK - module "fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 168, done.
+Counting objects: 100% (167/167), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (99/99), done.
+Writing objects: 100% (145/145), 24.47 KiB | 3.50 MiB/s, done.
+Total 145 (delta 53), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (53/53), completed with 8 local objects.
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-hw-2wrpr-sdk.git
+   574ae4d..93f09bf  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/hw/layer/mpfw_fw2-fnct-hw-2wrpr-sdk": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 88, done.
+Counting objects: 100% (88/88), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (62/62), done.
+Writing objects: 100% (73/73), 12.41 KiB | 4.14 MiB/s, done.
+Total 73 (delta 36), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-hw-3real.git
+   85bfeb4..cd53c9e  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/hw/layer/mpfw_fw2-fnct-hw-3real": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 62, done.
+Counting objects: 100% (62/62), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (44/44), 10.48 KiB | 5.24 MiB/s, done.
+Total 44 (delta 20), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-tui-0abst.git
+   890d983..c6f27c5  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/tui/layer/mpfw_fw2-fnct-tui-0abst": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (24/24), 5.00 KiB | 5.00 MiB/s, done.
+Total 24 (delta 12), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac.git
+   520e6c3..143020f  main -> main
+branch 'main' set up to track 'origin/main'.
+dbg msg - func_module_push.sh -> OK - module "fnct/tui/layer/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (27/27), 4.99 KiB | 4.99 MiB/s, done.
+Total 27 (delta 14), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-tui-2wrpr-ui.git
+   5c782ab..f305c57  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr-ui": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 80, done.
+Counting objects: 100% (79/79), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (55/55), done.
+Writing objects: 100% (60/60), 17.33 KiB | 4.33 MiB/s, done.
+Total 60 (delta 40), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-tui-3real.git
+   c148ab9..fbcbc6d  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "fnct/tui/layer/mpfw_fw2-fnct-tui-3real": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (16/16), 4.38 KiB | 4.38 MiB/s, done.
+Total 16 (delta 9), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac.git
+   ec9376f..60d1d56  main -> main
+branch 'main' set up to track 'origin/main'.
+dbg msg - func_module_push.sh -> OK - module "fnct/tui/layer/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 152.93 KiB | 756.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-main-app20240619_new_bis-5main.git
+   572cce2..5ecda14  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "main/app20240619_new_bis/layer/mpfw_fw2-main-app20240619_new_bis-5main": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+
+Enumerating objects: 51, done.
+Counting objects: 100% (51/51), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (44/44), 402.39 KiB | 633.00 KiB/s, done.
+Total 44 (delta 18), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-main-app20250424-5main.git
+   aba2dc6..5dfd454  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "main/app20250424/layer/mpfw_fw2-main-app20250424-5main": "git push" command terminated properly
+
+ =========================== "func_module_push.sh" script
+
+
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (19/19), 8.28 KiB | 8.28 MiB/s, done.
+Total 19 (delta 7), reused 0 (delta 0), pack-reused 0
+To file:///Volumes/mypass2/ObsiDataRemote/Year_2023/repo__prjs/mpfw_fw2-trdp-sdk-nxp-0trdp.git
+   4637e10..da66430  dev_work_sonoma_mcmn -> dev_work_sonoma_mcmn
+branch 'dev_work_sonoma_mcmn' set up to track 'origin/dev_work_sonoma_mcmn'.
+dbg msg - func_module_push.sh -> OK - module "trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp": "git push" command terminated properly
+
+
+******************+
+
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+Entering 'appl/app20240619/mpfw_fw2_appl_app20240619'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20240619/mpfw_fw2_appl_app20240619
+Entering 'appl/app20240619_new/mpfw_fw2_appl_app20240619_new'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20240619_new/mpfw_fw2_appl_app20240619_new
+Entering 'appl/app20240619_new_bis/layer/mpfw_fw2-appl-app20240619_new_bis-4appl'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20240619_new_bis/layer/mpfw_fw2-appl-app20240619_new_bis-4appl
+Entering 'appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl
+Entering 'appl/app20250424/mpfw_fw2_appl_app20250424'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250424/mpfw_fw2_appl_app20250424
+Entering 'appl/app20250625/layer/mpfw_fw2_appl_app20250625_4appl'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250625/layer/mpfw_fw2_appl_app20250625_4appl
+Entering 'appl/app20250625/layer/mpfw_fw2_appl_app20250625_5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250625/layer/mpfw_fw2_appl_app20250625_5main
+Entering 'apps/mpfw_code_apps_tst_20221206'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20221206
+Entering 'apps/mpfw_code_apps_tst_20230703app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20230703app
+Entering 'apps/mpfw_code_apps_tst_20230810app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20230810app
+Entering 'apps/mpfw_code_apps_tst_20240203app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240203app
+Entering 'apps/mpfw_code_apps_tst_20240317app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240317app
+Entering 'apps/mpfw_code_apps_tst_20240429app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240429app
+Entering 'apps/mpfw_code_apps_tst_20240619app'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240619app
+Entering 'cmake/mpfw_code_cmake'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/cmake/mpfw_code_cmake
+Entering 'cmake/mpfw_fw2_cmake'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/cmake/mpfw_fw2_cmake
+Entering 'fnct/base/layer/mpfw_fw2-fnct-base-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/layer/mpfw_fw2-fnct-base-0abst
+Entering 'fnct/base/layer/mpfw_fw2-fnct-base-4test'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/layer/mpfw_fw2-fnct-base-4test
+Entering 'fnct/base/mpfw_fw2_fnct_base'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/mpfw_fw2_fnct_base
+Entering 'fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst
+Entering 'fnct/core/layer/mpfw_fw2-fnct-core-2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2-fnct-core-2wrpr
+Entering 'fnct/core/layer/mpfw_fw2-fnct-core-3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2-fnct-core-3real
+Entering 'fnct/core/layer/mpfw_fw2_fnct_core_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2_fnct_core_2wrpr
+Entering 'fnct/core/layer/mpfw_fw2_fnct_core_3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2_fnct_core_3real
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-0abst
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-mac
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-stm-stm32f769_disco'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-stm-stm32f769_disco
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-2wrpr-sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-2wrpr-sdk
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-3real
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_0abst
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_1trdp_sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_1trdp_sdk
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_2wrpr
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_3real
+Entering 'fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-nxp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-nxp
+Entering 'fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-stm-stm32f769_disco'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-stm-stm32f769_disco
+Entering 'fnct/res/layer/mpfw_fw2-fnct-res-2wrpr-sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2-fnct-res-2wrpr-sdk
+Entering 'fnct/res/layer/mpfw_fw2_fnct_res_1trdp_sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2_fnct_res_1trdp_sdk
+Entering 'fnct/res/layer/mpfw_fw2_fnct_res_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2_fnct_res_2wrpr
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-0abst
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr-ui'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr-ui
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-3real
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac
+Entering 'fnct/tui/layer/mpfw_fw2_fnct_tui_0abst'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2_fnct_tui_0abst
+Entering 'fnct/tui/layer/mpfw_fw2_fnct_tui_2wrpr'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2_fnct_tui_2wrpr
+Entering 'fnct/tui/layer/mpfw_fw2_fnct_tui_3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2_fnct_tui_3real
+Entering 'libs/mpfw_code_libs_fw2_core_core'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_core_core
+Entering 'libs/mpfw_code_libs_fw2_wrapper_core'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_core
+Entering 'libs/mpfw_code_libs_fw2_wrapper_resources'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources
+Entering 'libs/mpfw_code_libs_sdk_mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_mac
+Entering 'libs/mpfw_code_libs_sdk_mac_ext'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_mac_ext
+Entering 'libs/mpfw_code_libs_sdk_nxp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_nxp
+Entering 'libs/mpfw_code_libs_sdk_stm'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_stm
+Entering 'libs/mpfw_code_libs_sdk_stm32f769_disco'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_stm32f769_disco
+Entering 'libs/mpfw_code_libs_sdk_stm32f769_disco_mod'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_stm32f769_disco_mod
+Entering 'main/app20240619/layer/mpfw_fw2_main_app20240619_5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20240619/layer/mpfw_fw2_main_app20240619_5main
+Entering 'main/app20240619_new_bis/layer/mpfw_fw2-main-app20240619_new_bis-5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20240619_new_bis/layer/mpfw_fw2-main-app20240619_new_bis-5main
+Entering 'main/app20250424/layer/mpfw_fw2-main-app20250424-5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   common/doc/build_nxp_terminal.txt
+	modified:   common/doc/note_20251029_new_style.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	common/doc/note_20260408_temporary.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20250424/layer/mpfw_fw2-main-app20250424-5main
+Entering 'main/app20250424/layer/mpfw_fw2_main_app20250424_5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20250424/layer/mpfw_fw2_main_app20250424_5main
+Entering 'main/mpfw_code_main_stm_20230420'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230420
+Entering 'main/mpfw_code_main_stm_20230424'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230424
+Entering 'main/mpfw_code_main_stm_20230501'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230501
+Entering 'main/mpfw_code_main_stm_20230504'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230504
+Entering 'main/mpfw_code_main_stm_20230505'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230505
+Entering 'main/mpfw_code_main_stm_20230516'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230516
+Entering 'main/mpfw_code_main_stm_20230520'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230520
+Entering 'main/mpfw_code_main_tst_20221229'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20221229
+Entering 'main/mpfw_code_main_tst_20230522'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20230522
+Entering 'main/mpfw_code_main_tst_20230703main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20230703main
+Entering 'main/mpfw_code_main_tst_20230810main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20230810main
+Entering 'main/mpfw_code_main_tst_20240203main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240203main
+Entering 'main/mpfw_code_main_tst_20240317main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240317main
+Entering 'main/mpfw_code_main_tst_20240429main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240429main
+Entering 'main/mpfw_code_main_tst_20240619main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main
+Entering 'trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-0trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-0trdp
+Entering 'trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-1trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-1trdp
+Entering 'trdp/sdk/mac/layer/mpfw_fw2_trdp_mac_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2_trdp_mac_0abst
+Entering 'trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp
+Entering 'trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-1trdp-usart'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-1trdp-usart
+Entering 'trdp/sdk/nxp/layer/mpfw_fw2_trdp_nxp_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/nxp/layer/mpfw_fw2_trdp_nxp_0abst
+Entering 'trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-0trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-0trdp
+Entering 'trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-1trdp-usart'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-1trdp-usart
+Entering 'trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2_trdp_stm32f769_disco_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2_trdp_stm32f769_disco_0abst
+dbg msg on stderr -> exit [q] - continue [any key]
+
+
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+*********************
+
+
+
+result: Continue: It's all OK      -> perform the commands
+dbg msg - obdash.sh -> Selected: Continue
+dbg msg - obdash.sh -> ===============
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl (new commits)
+	modified:   main/app20250424/layer/mpfw_fw2-main-app20250424-5main (modified content, untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	help/20260227_temporary.txt
+	help/20260227_temporary_2
+	help/20260227_temporary_3
+	help/20260227_temporary_4
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code
+Entering 'appl/app20240619/mpfw_fw2_appl_app20240619'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20240619/mpfw_fw2_appl_app20240619
+Entering 'appl/app20240619_new/mpfw_fw2_appl_app20240619_new'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20240619_new/mpfw_fw2_appl_app20240619_new
+Entering 'appl/app20240619_new_bis/layer/mpfw_fw2-appl-app20240619_new_bis-4appl'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20240619_new_bis/layer/mpfw_fw2-appl-app20240619_new_bis-4appl
+Entering 'appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl
+Entering 'appl/app20250424/mpfw_fw2_appl_app20250424'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250424/mpfw_fw2_appl_app20250424
+Entering 'appl/app20250625/layer/mpfw_fw2_appl_app20250625_4appl'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250625/layer/mpfw_fw2_appl_app20250625_4appl
+Entering 'appl/app20250625/layer/mpfw_fw2_appl_app20250625_5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/appl/app20250625/layer/mpfw_fw2_appl_app20250625_5main
+Entering 'apps/mpfw_code_apps_tst_20221206'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20221206
+Entering 'apps/mpfw_code_apps_tst_20230703app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20230703app
+Entering 'apps/mpfw_code_apps_tst_20230810app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20230810app
+Entering 'apps/mpfw_code_apps_tst_20240203app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240203app
+Entering 'apps/mpfw_code_apps_tst_20240317app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240317app
+Entering 'apps/mpfw_code_apps_tst_20240429app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240429app
+Entering 'apps/mpfw_code_apps_tst_20240619app'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/apps/mpfw_code_apps_tst_20240619app
+Entering 'cmake/mpfw_code_cmake'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/cmake/mpfw_code_cmake
+Entering 'cmake/mpfw_fw2_cmake'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/cmake/mpfw_fw2_cmake
+Entering 'fnct/base/layer/mpfw_fw2-fnct-base-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/layer/mpfw_fw2-fnct-base-0abst
+Entering 'fnct/base/layer/mpfw_fw2-fnct-base-4test'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/layer/mpfw_fw2-fnct-base-4test
+Entering 'fnct/base/mpfw_fw2_fnct_base'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base/mpfw_fw2_fnct_base
+Entering 'fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst
+Entering 'fnct/core/layer/mpfw_fw2-fnct-core-2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2-fnct-core-2wrpr
+Entering 'fnct/core/layer/mpfw_fw2-fnct-core-3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2-fnct-core-3real
+Entering 'fnct/core/layer/mpfw_fw2_fnct_core_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2_fnct_core_2wrpr
+Entering 'fnct/core/layer/mpfw_fw2_fnct_core_3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/core/layer/mpfw_fw2_fnct_core_3real
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-0abst
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-0abst-trdp-sdk-mac
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-mac
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-stm-stm32f769_disco'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-stm-stm32f769_disco
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-2wrpr-sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-2wrpr-sdk
+Entering 'fnct/hw/layer/mpfw_fw2-fnct-hw-3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2-fnct-hw-3real
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_0abst
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_1trdp_sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_1trdp_sdk
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_2wrpr
+Entering 'fnct/hw/layer/mpfw_fw2_fnct_hw_3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/hw/layer/mpfw_fw2_fnct_hw_3real
+Entering 'fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-nxp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-nxp
+Entering 'fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-stm-stm32f769_disco'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2-fnct-res-1trdp-sdk-stm-stm32f769_disco
+Entering 'fnct/res/layer/mpfw_fw2-fnct-res-2wrpr-sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2-fnct-res-2wrpr-sdk
+Entering 'fnct/res/layer/mpfw_fw2_fnct_res_1trdp_sdk'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2_fnct_res_1trdp_sdk
+Entering 'fnct/res/layer/mpfw_fw2_fnct_res_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/res/layer/mpfw_fw2_fnct_res_2wrpr
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-0abst
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-0abst-trdp-sdk-mac
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr-ui'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-2wrpr-ui
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-3real
+Entering 'fnct/tui/layer/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2-fnct-tui-3real-trdp-sdk-mac
+Entering 'fnct/tui/layer/mpfw_fw2_fnct_tui_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2_fnct_tui_0abst
+Entering 'fnct/tui/layer/mpfw_fw2_fnct_tui_2wrpr'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2_fnct_tui_2wrpr
+Entering 'fnct/tui/layer/mpfw_fw2_fnct_tui_3real'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/fnct/tui/layer/mpfw_fw2_fnct_tui_3real
+Entering 'libs/mpfw_code_libs_fw2_core_core'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_core_core
+Entering 'libs/mpfw_code_libs_fw2_wrapper_core'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_core
+Entering 'libs/mpfw_code_libs_fw2_wrapper_resources'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources
+Entering 'libs/mpfw_code_libs_sdk_mac'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_mac
+Entering 'libs/mpfw_code_libs_sdk_mac_ext'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_mac_ext
+Entering 'libs/mpfw_code_libs_sdk_nxp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_nxp
+Entering 'libs/mpfw_code_libs_sdk_stm'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_stm
+Entering 'libs/mpfw_code_libs_sdk_stm32f769_disco'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_stm32f769_disco
+Entering 'libs/mpfw_code_libs_sdk_stm32f769_disco_mod'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_sdk_stm32f769_disco_mod
+Entering 'main/app20240619/layer/mpfw_fw2_main_app20240619_5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20240619/layer/mpfw_fw2_main_app20240619_5main
+Entering 'main/app20240619_new_bis/layer/mpfw_fw2-main-app20240619_new_bis-5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20240619_new_bis/layer/mpfw_fw2-main-app20240619_new_bis-5main
+Entering 'main/app20250424/layer/mpfw_fw2-main-app20250424-5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   common/doc/build_nxp_terminal.txt
+	modified:   common/doc/note_20251029_new_style.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	common/doc/note_20260408_temporary.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20250424/layer/mpfw_fw2-main-app20250424-5main
+Entering 'main/app20250424/layer/mpfw_fw2_main_app20250424_5main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/app20250424/layer/mpfw_fw2_main_app20250424_5main
+Entering 'main/mpfw_code_main_stm_20230420'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230420
+Entering 'main/mpfw_code_main_stm_20230424'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230424
+Entering 'main/mpfw_code_main_stm_20230501'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230501
+Entering 'main/mpfw_code_main_stm_20230504'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230504
+Entering 'main/mpfw_code_main_stm_20230505'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230505
+Entering 'main/mpfw_code_main_stm_20230516'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230516
+Entering 'main/mpfw_code_main_stm_20230520'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230520
+Entering 'main/mpfw_code_main_tst_20221229'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20221229
+Entering 'main/mpfw_code_main_tst_20230522'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20230522
+Entering 'main/mpfw_code_main_tst_20230703main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20230703main
+Entering 'main/mpfw_code_main_tst_20230810main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20230810main
+Entering 'main/mpfw_code_main_tst_20240203main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240203main
+Entering 'main/mpfw_code_main_tst_20240317main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240317main
+Entering 'main/mpfw_code_main_tst_20240429main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240429main
+Entering 'main/mpfw_code_main_tst_20240619main'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_tst_20240619main
+Entering 'trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-0trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-0trdp
+Entering 'trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-1trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2-trdp-sdk-mac-1trdp
+Entering 'trdp/sdk/mac/layer/mpfw_fw2_trdp_mac_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/mac/layer/mpfw_fw2_trdp_mac_0abst
+Entering 'trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp
+Entering 'trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-1trdp-usart'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-1trdp-usart
+Entering 'trdp/sdk/nxp/layer/mpfw_fw2_trdp_nxp_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/nxp/layer/mpfw_fw2_trdp_nxp_0abst
+Entering 'trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-0trdp'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-0trdp
+Entering 'trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-1trdp-usart'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2-trdp-sdk-stm-stm32f769_disco-1trdp-usart
+Entering 'trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2_trdp_stm32f769_disco_0abst'
+On branch dev_work_sonoma_mcmn
+Your branch is up to date with 'origin/dev_work_sonoma_mcmn'.
+
+nothing to commit, working tree clean
+dbg msg - git_sub_repo_local_cmd.sh -> =============== /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/trdp/sdk/stm/stm32f769_disco/layer/mpfw_fw2_trdp_stm32f769_disco_0abst
+dbg msg on stderr -> exit [q] - continue [any key]
+
