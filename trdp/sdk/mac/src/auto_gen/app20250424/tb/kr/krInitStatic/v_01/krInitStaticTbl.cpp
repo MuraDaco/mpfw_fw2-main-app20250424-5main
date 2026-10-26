@@ -33,13 +33,16 @@
 
 // lib include
 // ->> #include modules here ... <<-
-
+#include "krTimerManager.h"
+#include "app_init.h"
 
 namespace fw2 { namespace core { namespace core {
 
 krInitStaticTbl::InitFunction_t krInitStaticTbl::krInitStaticPtrArray[] = {
 
     // ->> list of pointer function here ... <<-
+        PTR_TASK_OF_krInitStatic_001_FNCT_CORE_2WRPR_KR_TIMER_init,
+        PTR_TASK_OF_krInitStatic_003_APPL_CORE_4APPL_APP_INIT_init,
 
 	nullptr
 };

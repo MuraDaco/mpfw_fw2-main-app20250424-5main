@@ -1,0 +1,2461 @@
+Last login: Mon Jun 15 08:24:51 on ttys003
+work@umtiefs-Mac-mini test_bash % mkdir main
+work@umtiefs-Mac-mini test_bash % cd main 
+work@umtiefs-Mac-mini main % mkdir sub_dir_1
+work@umtiefs-Mac-mini main % mkdir move_dirs
+work@umtiefs-Mac-mini main % mkdir sub_dir_2
+work@umtiefs-Mac-mini main % mkdir sub_dir_3
+work@umtiefs-Mac-mini main % cd sub_dir_1   
+work@umtiefs-Mac-mini sub_dir_1 % cd ..-       
+cd: no such file or directory: ..-
+work@umtiefs-Mac-mini sub_dir_1 % cd .. 
+work@umtiefs-Mac-mini main % ls -al         
+total 16
+drwxr-xr-x  7 work  staff   224 Jun 15 15:11 .
+drwxr-xr-x  3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@ 1 work  staff  6148 Jun 15 15:11 .DS_Store
+drwxr-xr-x  2 work  staff    64 Jun 15 15:09 move_dirs
+drwxr-xr-x  5 work  staff   160 Jun 15 15:12 sub_dir_1
+drwxr-xr-x  2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x  2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % mv sub_dir_1/sub_dir_1_1 move_dirs
+work@umtiefs-Mac-mini main % mv sub_dir_1/sub_dir_1_2 move_dirs
+work@umtiefs-Mac-mini main % man mkdir
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % mkdir main_new
+work@umtiefs-Mac-mini main % mkdir sub_dir_1/sub_dir_1_1/sub_dir_1_1_2
+mkdir: sub_dir_1/sub_dir_1_1: No such file or directory
+work@umtiefs-Mac-mini main % mkdir -p sub_dir_1/sub_dir_1_1/sub_dir_1_1_2
+work@umtiefs-Mac-mini main % man rsync
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % ls -al   
+total 16
+drwxr-xr-x  8 work  staff   256 Jun 15 15:27 .
+drwxr-xr-x  3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@ 1 work  staff  6148 Jun 15 15:11 .DS_Store
+drwxr-xr-x  2 work  staff    64 Jun 15 15:27 main_new
+drwxr-xr-x  4 work  staff   128 Jun 15 15:18 move_dirs
+drwxr-xr-x  4 work  staff   128 Jun 15 15:28 sub_dir_1
+drwxr-xr-x  2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x  2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % ls -al main_new 
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 15 15:27 .
+drwxr-xr-x  8 work  staff  256 Jun 15 15:27 ..
+work@umtiefs-Mac-mini main % rsync -na sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new 
+work@umtiefs-Mac-mini main % ls -al sub_dir_1/sub_dir_1_2/sub_dir_1_2_1
+total 8
+drwxr-xr-x  3 work  staff   96 Jun 15 15:15 .
+drwxr-xr-x  4 work  staff  128 Jun 15 16:47 ..
+-rw-r--r--@ 1 work  staff  378 Jan 13  2025 salve_regina_latino.txt
+work@umtiefs-Mac-mini main % rsync -na sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+work@umtiefs-Mac-mini main % rsync -na -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+work@umtiefs-Mac-mini main % rsync -a -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new 
+work@umtiefs-Mac-mini main % rsync -na -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+work@umtiefs-Mac-mini main % rsync -na -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1 main_new 
+work@umtiefs-Mac-mini main % rsync -nav -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1 main_new
+building file list ... done
+sub_dir_1_2_1/
+sub_dir_1_2_1/salve_regina_latino.txt
+
+sent 134 bytes  received 32 bytes  332.00 bytes/sec
+total size is 378  speedup is 2.28
+work@umtiefs-Mac-mini main % rsync -nav -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+building file list ... done
+./
+salve_regina_latino.txt
+
+sent 120 bytes  received 32 bytes  304.00 bytes/sec
+total size is 378  speedup is 2.49
+work@umtiefs-Mac-mini main % rsync -nav sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new 
+building file list ... done
+./
+salve_regina_latino.txt
+
+sent 120 bytes  received 32 bytes  304.00 bytes/sec
+total size is 378  speedup is 2.49
+work@umtiefs-Mac-mini main % rsync -nav -relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+building file list ... done
+./
+salve_regina_latino.txt
+
+sent 120 bytes  received 32 bytes  304.00 bytes/sec
+total size is 378  speedup is 2.49
+work@umtiefs-Mac-mini main % rsync -nav sub_dir_1/sub_dir_1_2/sub_dir_1_2_1 main_new          
+building file list ... done
+sub_dir_1_2_1/
+sub_dir_1_2_1/salve_regina_latino.txt
+
+sent 134 bytes  received 32 bytes  332.00 bytes/sec
+total size is 378  speedup is 2.28
+work@umtiefs-Mac-mini main % rsync -nav sub_dir_1/sub_dir_1_2/sub_dir_1_2_1 main_new           
+building file list ... done
+sub_dir_1_2_1/
+sub_dir_1_2_1/salve_regina_latino.txt
+
+sent 134 bytes  received 32 bytes  332.00 bytes/sec
+total size is 378  speedup is 2.28
+work@umtiefs-Mac-mini main % rsync -nav sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt main_new 
+building file list ... done
+salve_regina_latino.txt
+
+sent 99 bytes  received 26 bytes  250.00 bytes/sec
+total size is 378  speedup is 3.02
+work@umtiefs-Mac-mini main % man sync 
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man rsync                                                                      
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+building file list ... done
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+
+sent 191 bytes  received 44 bytes  470.00 bytes/sec
+total size is 378  speedup is 1.61
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt main_new 
+building file list ... done
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+
+sent 191 bytes  received 44 bytes  470.00 bytes/sec
+total size is 378  speedup is 1.61
+work@umtiefs-Mac-mini main % rsync -av --relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt main_new 
+building file list ... done
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+
+sent 609 bytes  received 60 bytes  1338.00 bytes/sec
+total size is 378  speedup is 0.57
+work@umtiefs-Mac-mini main % man grep
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % 
+work@umtiefs-Mac-mini main % test_str="pippo/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt"; echo "${test_str%*pippo}"
+pippo/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+work@umtiefs-Mac-mini main % test_str="pippo/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt"; echo "${test_str#*pippo}"
+/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+work@umtiefs-Mac-mini main % test_str="pippo/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt"; echo "${test_str#*pippo/}"
+sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+work@umtiefs-Mac-mini main % touch /Users/work/TempData/test_bash/main/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+work@umtiefs-Mac-mini main % touch /Users/work/TempData/test_bash/main/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+work@umtiefs-Mac-mini main % touch /Users/work/TempData/test_bash/main/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+work@umtiefs-Mac-mini main % test_str="pippo/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/.h"; echo "${test_str#*pippo/}" 
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/.h
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new
+building file list ... done
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 210 bytes  received 50 bytes  520.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/ main_new
+building file list ... done
+sub_dir_1/sub_dir_1_2/
+
+sent 173 bytes  received 26 bytes  398.00 bytes/sec
+total size is 378  speedup is 1.90
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1 main_new 
+building file list ... done
+sub_dir_1/sub_dir_1_2/
+
+sent 173 bytes  received 26 bytes  398.00 bytes/sec
+total size is 378  speedup is 1.90
+work@umtiefs-Mac-mini main % rsync -av --relative sub_dir_1/sub_dir_1_2/sub_dir_1_2_1 main_new 
+building file list ... done
+sub_dir_1/sub_dir_1_2/
+
+sent 173 bytes  received 26 bytes  398.00 bytes/sec
+total size is 378  speedup is 1.90
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new
+building file list ... done
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 204 bytes  received 44 bytes  496.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -av --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new 
+building file list ... done
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 312 bytes  received 92 bytes  808.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new/test
+building file list ... done
+created directory main_new/test
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 216 bytes  received 56 bytes  544.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new/test/
+building file list ... done
+created directory main_new/test
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 216 bytes  received 56 bytes  544.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new/test 
+building file list ... done
+created directory main_new/test
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 216 bytes  received 56 bytes  544.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -av --relative sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h main_new/test 
+building file list ... done
+created directory main_new/test
+sub_dir_1/
+sub_dir_1/sub_dir_1_2/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 324 bytes  received 104 bytes  856.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h .
+building file list ... done
+
+sent 212 bytes  received 20 bytes  464.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h ./
+building file list ... done
+
+sent 212 bytes  received 20 bytes  464.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h   
+building file list ... done
+ERROR: destination must be a directory when copying more than 1 file
+rsync error: errors selecting input/output files, dirs (code 3) at /AppleInternal/Library/BuildRoots/ce725a5f-c761-11ee-a4ec-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/rsync/rsync/main.c(504) [receiver=2.6.9]
+rsync: connection unexpectedly closed (8 bytes received so far) [sender]
+rsync error: error in rsync protocol data stream (code 12) at /AppleInternal/Library/BuildRoots/ce725a5f-c761-11ee-a4ec-b6ef2fd8d87b/Library/Caches/com.apple.xbs/Sources/rsync/rsync/io.c(453) [sender=2.6.9]
+work@umtiefs-Mac-mini main % rsync -nav --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h ./
+building file list ... done
+
+sent 212 bytes  received 20 bytes  464.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -nav --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h sub_dir_1
+building file list ... done
+created directory sub_dir_1
+main_new/
+main_new/test/
+main_new/test/sub_dir_1/
+main_new/test/sub_dir_1/sub_dir_1_2/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 260 bytes  received 68 bytes  656.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % 
+  [Restored 16 Jun 2026 at 07:48:49]
+Last login: Tue Jun 16 07:48:49 on ttys003
+Restored session: Mon Jun 15 19:19:02 CEST 2026
+work@umtiefs-Mac-mini main % rsync -nav --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h sub_dir_1
+building file list ... done
+created directory sub_dir_1
+main_new/
+main_new/test/
+main_new/test/sub_dir_1/
+main_new/test/sub_dir_1/sub_dir_1_2/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 260 bytes  received 68 bytes  656.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -av --relative main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/*.h sub_dir_1 
+building file list ... done
+created directory sub_dir_1
+main_new/
+main_new/test/
+main_new/test/sub_dir_1/
+main_new/test/sub_dir_1/sub_dir_1_2/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 368 bytes  received 116 bytes  968.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -av --relative main_new/test/sub_dir_1//sub_dir_1_2/sub_dir_1_3_1/*.h sub_dir_1
+building file list ... done
+created directory sub_dir_1
+main_new/
+main_new/test/
+main_new/test/sub_dir_1/
+main_new/test/sub_dir_1/sub_dir_1_2/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 375 bytes  received 116 bytes  982.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % rsync -av --relative main_new/test/sub_dir_1/./sub_dir_1_2/sub_dir_1_3_1/*.h sub_dir_1
+building file list ... done
+created directory sub_dir_1
+sub_dir_1_2/
+sub_dir_1_2/sub_dir_1_3_1/
+sub_dir_1_2/sub_dir_1_3_1/file_1.h
+sub_dir_1_2/sub_dir_1_3_1/file_2.h
+sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+sent 297 bytes  received 98 bytes  790.00 bytes/sec
+total size is 0  speedup is 0.00
+work@umtiefs-Mac-mini main % man rsync
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man git  
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man git-submodules
+Unknown locale, assuming C
+No manual entry for git-submodules
+work@umtiefs-Mac-mini main % man git-submodule 
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man git-rm       
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man git-submodule
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % pwd
+/Users/work/TempData/test_bash/main
+work@umtiefs-Mac-mini main % git init 
+Initialized empty Git repository in /Users/work/TempData/test_bash/main/.git/
+work@umtiefs-Mac-mini main % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % touch main_file.txt
+work@umtiefs-Mac-mini main % mkdir cmake
+work@umtiefs-Mac-mini main % man mkdir  
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % mkdir -p appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % mkdir -p appl/layer/mpfw_fw2-applmm_nn_pp-0abst  
+work@umtiefs-Mac-mini main % touch appl/layer/mpfw_fw2-applxx_yy_zz-0abst/appxx_file.txt
+work@umtiefs-Mac-mini main % touch appl/layer/mpfw_fw2-applmm_nn_pp-0abst/appmm_file.txt
+work@umtiefs-Mac-mini main % git status                                                 
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appl/
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_file.txt
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst; git init )
+Initialized empty Git repository in /Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git/
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git init )
+Initialized empty Git repository in /Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git/
+work@umtiefs-Mac-mini main % git add main_file.txt 
+work@umtiefs-Mac-mini main % git status                                            
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   main_file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appl/
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % man git-submodule                                          
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applmm_nn_pp-0ab  
+error: pathspec 'appl/layer/mpfw_fw2-applmm_nn_pp-0ab' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+
+error: pathspec 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % 
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+error: pathspec 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 10:32 .
+drwxr-xr-x  4 work  staff  128 Jun 16 10:02 ..
+drwxr-xr-x  9 work  staff  288 Jun 16 10:32 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:04 appmm_file.txt
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git 
+total 24
+drwxr-xr-x   9 work  staff  288 Jun 16 10:32 .
+drwxr-xr-x   4 work  staff  128 Jun 16 10:32 ..
+-rw-r--r--   1 work  staff   21 Jun 16 10:32 HEAD
+-rw-r--r--   1 work  staff  137 Jun 16 10:32 config
+-rw-r--r--   1 work  staff   73 Jun 16 10:32 description
+drwxr-xr-x  15 work  staff  480 Jun 16 10:32 hooks
+drwxr-xr-x   3 work  staff   96 Jun 16 10:32 info
+drwxr-xr-x   4 work  staff  128 Jun 16 10:32 objects
+drwxr-xr-x   4 work  staff  128 Jun 16 10:32 refs
+work@umtiefs-Mac-mini main % man git-submodule                                                      
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man git-submodule                                                      
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs -- appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+error: pathspec 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs -- appl/layer/mpfw_fw2-applmm_nn_pp-0abst/    
+error: pathspec 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst/' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % man git-add                                                               
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % man git-submodule                                                         
+Unknown locale, assuming C
+work@umtiefs-Mac-mini main % git submodule add "appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git" "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"
+fatal: repo URL: 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git' must be absolute or begin with ./|../
+work@umtiefs-Mac-mini main % git submodule add "./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git" "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"
+fatal: 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' does not have a commit checked out
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git add .; git commit -m "First commit" )                     
+[main (root-commit) 5df889c] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 appmm_file.txt
+work@umtiefs-Mac-mini main % git submodule add "./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git" "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"
+Adding existing repo at 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' to the index
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applmm_nn_pp-0abst                                     
+Migrating git directory of 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' from
+'/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git' to
+'/Users/work/TempData/test_bash/main/.git/modules/appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 10:54 .
+drwxr-xr-x  4 work  staff  128 Jun 16 10:02 ..
+-rw-r--r--  1 work  staff   69 Jun 16 10:54 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:04 appmm_file.txt
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applxx_yy_zz-0abst 
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 10:32 .
+drwxr-xr-x  4 work  staff  128 Jun 16 10:02 ..
+drwxr-xr-x  9 work  staff  288 Jun 16 10:32 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % git submodule add "./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git" "appl/layer/mpfw_fw2-applxx_yy_zz-0abst" 
+fatal: 'appl/layer/mpfw_fw2-applxx_yy_zz-0abst' does not have a commit checked out
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applxx_yy_zz-0abst                                        
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 10:32 .
+drwxr-xr-x  4 work  staff  128 Jun 16 10:02 ..
+drwxr-xr-x  9 work  staff  288 Jun 16 10:32 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst; git add .; git commit -m "First commit" )      
+[main (root-commit) e8c1222] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 appxx_file.txt
+work@umtiefs-Mac-mini main % git submodule add "./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git" "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"
+Adding existing repo at 'appl/layer/mpfw_fw2-applxx_yy_zz-0abst' to the index
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applxx_yy_zz-0abst                                                             
+total 0
+drwxr-xr-x   4 work  staff  128 Jun 16 10:32 .
+drwxr-xr-x   4 work  staff  128 Jun 16 10:02 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 10:57 .git
+-rw-r--r--   1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % ls -al
+total 24
+drwxr-xr-x  16 work  staff   512 Jun 16 10:58 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  11 work  staff   352 Jun 16 10:58 .git
+-rw-r--r--   1 work  staff   306 Jun 16 10:58 .gitmodules
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % cat .gitmodules 
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+work@umtiefs-Mac-mini main % ls -al         
+total 24
+drwxr-xr-x  16 work  staff   512 Jun 16 10:58 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  11 work  staff   352 Jun 16 10:58 .git
+-rw-r--r--   1 work  staff   306 Jun 16 10:58 .gitmodules
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+total 0
+drwxr-xr-x   4 work  staff  128 Jun 16 10:32 .
+drwxr-xr-x   4 work  staff  128 Jun 16 10:02 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 10:57 .git
+-rw-r--r--   1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applxx_yy_zz-0abst                                        
+Migrating git directory of 'appl/layer/mpfw_fw2-applxx_yy_zz-0abst' from
+'/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git' to
+'/Users/work/TempData/test_bash/main/.git/modules/appl/layer/mpfw_fw2-applxx_yy_zz-0abst'
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applxx_yy_zz-0abst                     
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 .
+drwxr-xr-x  4 work  staff  128 Jun 16 10:02 ..
+-rw-r--r--  1 work  staff   69 Jun 16 11:00 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   .gitmodules
+	new file:   appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	new file:   appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	new file:   main_file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git commit -m "First commit"
+[main (root-commit) 608efcb] First commit
+ 4 files changed, 8 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+ create mode 160000 appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+ create mode 100644 main_file.txt
+work@umtiefs-Mac-mini main % git status                  
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git branch -vv
+* main 608efcb First commit
+work@umtiefs-Mac-mini main % git logpretty
+* 608efcb5fe88537b37569cf28dd3f04998702415 (HEAD -> main) First commit
+work@umtiefs-Mac-mini main % git checkout -b main_plus
+Switched to a new branch 'main_plus'
+work@umtiefs-Mac-mini main % git logpretty            
+* 608efcb5fe88537b37569cf28dd3f04998702415 (HEAD -> main_plus, main) First commit
+work@umtiefs-Mac-mini main % mkdir -p appl/layer/mpfw_fw2-applgg_hh_ii                                                                 
+work@umtiefs-Mac-mini main % (cdh appl/layer/mpfw_fw2-applgg_hh_ii; touch appgg_file.txt; git init; git add .; git commit -m "First commit"; git logpretty) 
+zsh: command not found: cdh
+Reinitialized existing Git repository in /Users/work/TempData/test_bash/main/.git/
+[main_plus a533a1b] First commit
+ 26 files changed, 28 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 appgg_file.txt
+ create mode 100644 del2_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+ create mode 100644 del2_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+ create mode 100644 del2_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+ create mode 100644 del3_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+ create mode 100644 del3_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+ create mode 100644 del3_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+ create mode 100644 del_sub_dir_1/.DS_Store
+ create mode 100644 del_sub_dir_1/sub_dir_1_2/.DS_Store
+ create mode 100644 del_sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+ create mode 100644 del_sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+ create mode 100644 del_sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+ create mode 100644 del_sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+ create mode 100644 main_new/.DS_Store
+ create mode 100644 main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+ create mode 100644 main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+ create mode 100644 main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+ create mode 100644 main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+ create mode 100644 main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+ create mode 100644 main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+ create mode 100644 main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+ create mode 100644 move_dirs/.DS_Store
+ create mode 100644 sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+ create mode 100644 sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+ create mode 100644 sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+* a533a1b41e45e6227cfb3e29e2f478a2fa25e047 (HEAD -> main_plus) First commit
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applgg_hh_ii; touch appgg_file.txt; git init; git add .; git commit -m "First commit"; git logpretty) 
+Initialized empty Git repository in /Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git/
+[main (root-commit) 69fe059] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 appgg_file.txt
+* 69fe059d6aa81a919df336dde6230cd6a8b77b19 (HEAD -> main) First commit
+work@umtiefs-Mac-mini main % git reset HEAD~
+work@umtiefs-Mac-mini main % git logpretty                                                                                                                
+* 608efcb5fe88537b37569cf28dd3f04998702415 (HEAD -> main_plus, main) First commit
+work@umtiefs-Mac-mini main % git submodule add "./appl/layer/mpfw_fw2-applgg_hh_ii/.git" "appl/layer/mpfw_fw2-applgg_hh_ii" 
+Adding existing repo at 'appl/layer/mpfw_fw2-applgg_hh_ii' to the index
+work@umtiefs-Mac-mini main % cat .gitmodules 
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % ls -al      
+total 24
+drwxr-xr-x  17 work  staff   544 Jun 16 14:27 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  14 work  staff   448 Jun 16 14:27 .git
+-rw-r--r--   1 work  staff   441 Jun 16 14:27 .gitmodules
+-rw-r--r--   1 work  staff     0 Jun 16 14:09 appgg_file.txt
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % cat .gitmodules
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applgg_hh_ii 
+total 0
+drwxr-xr-x   4 work  staff  128 Jun 16 14:09 .
+drwxr-xr-x   5 work  staff  160 Jun 16 11:07 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 14:09 .git
+-rw-r--r--   1 work  staff    0 Jun 16 14:09 appgg_file.txt
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applgg_hh_ii                                                                  
+Migrating git directory of 'appl/layer/mpfw_fw2-applgg_hh_ii' from
+'/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git' to
+'/Users/work/TempData/test_bash/main/.git/modules/appl/layer/mpfw_fw2-applgg_hh_ii'
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main
+M	.gitmodules
+A	appl/layer/mpfw_fw2-applgg_hh_ii
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % git logpretty
+* 608efcb5fe88537b37569cf28dd3f04998702415 (HEAD -> main, main_plus) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus
+M	.gitmodules
+A	appl/layer/mpfw_fw2-applgg_hh_ii
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % git status
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+	new file:   appl/layer/mpfw_fw2-applgg_hh_ii
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appgg_file.txt
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git add .
+work@umtiefs-Mac-mini main % git status
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	modified:   .gitmodules
+	new file:   appgg_file.txt
+	new file:   appl/layer/mpfw_fw2-applgg_hh_ii
+	new file:   del2_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+	new file:   del2_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+	new file:   del2_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+	new file:   del3_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+	new file:   del3_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+	new file:   del3_sub_dir_1/main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+	new file:   del_sub_dir_1/.DS_Store
+	new file:   del_sub_dir_1/sub_dir_1_2/.DS_Store
+	new file:   del_sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+	new file:   del_sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+	new file:   del_sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+	new file:   del_sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+	new file:   main_new/.DS_Store
+	new file:   main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_2_1/salve_regina_latino.txt
+	new file:   main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+	new file:   main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+	new file:   main_new/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+	new file:   main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+	new file:   main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+	new file:   main_new/test/sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+	new file:   move_dirs/.DS_Store
+	new file:   sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_1.h
+	new file:   sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_2.h
+	new file:   sub_dir_1/sub_dir_1_2/sub_dir_1_3_1/file_3.h
+
+work@umtiefs-Mac-mini main % 
+work@umtiefs-Mac-mini main % git restore --staged                                                                                                         
+fatal: you must specify path(s) to restore
+work@umtiefs-Mac-mini main % git restore --staged .
+work@umtiefs-Mac-mini main % git status            
+On branch main_plus
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitmodules
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appgg_file.txt
+	appl/layer/mpfw_fw2-applgg_hh_ii/
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+work@umtiefs-Mac-mini main %  cat .gitmodules 
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git add .gitmodules 
+work@umtiefs-Mac-mini main % git status         
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appgg_file.txt
+	appl/layer/mpfw_fw2-applgg_hh_ii/
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git add appl/layer 
+warning: adding embedded git repository: appl/layer/mpfw_fw2-applgg_hh_ii
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> appl/layer/mpfw_fw2-applgg_hh_ii
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached appl/layer/mpfw_fw2-applgg_hh_ii
+hint: 
+hint: See "git help submodule" for more information.
+work@umtiefs-Mac-mini main % git status        
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+	new file:   appl/layer/mpfw_fw2-applgg_hh_ii
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appgg_file.txt
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git restore --staged appl/layer/mpfw_fw2-applgg_hh_ii
+work@umtiefs-Mac-mini main % git status                                           
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appgg_file.txt
+	appl/layer/mpfw_fw2-applgg_hh_ii/
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applgg_hh_ii
+error: pathspec 'appl/layer/mpfw_fw2-applgg_hh_ii' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % git submodule add "./appl/layer/mpfw_fw2-applgg_hh_ii/.git" "appl/layer/mpfw_fw2-applgg_hh_ii"
+Adding existing repo at 'appl/layer/mpfw_fw2-applgg_hh_ii' to the index
+work@umtiefs-Mac-mini main %  cat .gitmodules                                                                           
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git status                                                                                    
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+	new file:   appl/layer/mpfw_fw2-applgg_hh_ii
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	appgg_file.txt
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git submodule absorbgitdirs appl/layer/mpfw_fw2-applgg_hh_ii            
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applgg_hh_ii                     
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 14:30 .
+drwxr-xr-x  5 work  staff  160 Jun 16 11:07 ..
+-rw-r--r--  1 work  staff   63 Jun 16 14:30 .git
+-rw-r--r--  1 work  staff    0 Jun 16 14:09 appgg_file.txt
+work@umtiefs-Mac-mini main % ls -al
+total 24
+drwxr-xr-x  17 work  staff   544 Jun 16 14:37 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  14 work  staff   448 Jun 16 14:38 .git
+-rw-r--r--   1 work  staff   441 Jun 16 14:37 .gitmodules
+-rw-r--r--   1 work  staff     0 Jun 16 14:09 appgg_file.txt
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % rm appgg_file.txt 
+work@umtiefs-Mac-mini main % ls -al           
+total 24
+drwxr-xr-x  16 work  staff   512 Jun 16 14:39 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  14 work  staff   448 Jun 16 14:38 .git
+-rw-r--r--   1 work  staff   441 Jun 16 14:37 .gitmodules
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % git logpretty  
+* 608efcb5fe88537b37569cf28dd3f04998702415 (HEAD -> main_plus, main) First commit
+work@umtiefs-Mac-mini main % git commit -m "Second commi: add [gg] module"
+[main_plus 675afad] Second commi: add [gg] module
+ 2 files changed, 4 insertions(+)
+ create mode 160000 appl/layer/mpfw_fw2-applgg_hh_ii
+work@umtiefs-Mac-mini main % git logpretty                                
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                
+Already on 'main_plus'
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main     
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % cat .gitmodules                            
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+work@umtiefs-Mac-mini main % ls -al
+total 24
+drwxr-xr-x  16 work  staff   512 Jun 16 14:41 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  14 work  staff   448 Jun 16 14:41 .git
+-rw-r--r--   1 work  staff   306 Jun 16 14:41 .gitmodules
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % ls -al appl/layer 
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 14:41 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 10:54 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git logpretty                              
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (HEAD -> main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % ls -al appl/layer                          
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 14:47 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  4 work  staff  128 Jun 16 10:54 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules -b main_minus
+Switched to a new branch 'main_minus'
+work@umtiefs-Mac-mini main % ls -al appl/layer                              
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 14:47 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  4 work  staff  128 Jun 16 10:54 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git logpretty                                  
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_minus, main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git submodule deinit mpfw_fw2-applmm_nn_pp-0abst
+error: pathspec 'mpfw_fw2-applmm_nn_pp-0abst' did not match any file(s) known to git
+work@umtiefs-Mac-mini main % git submodule deinit appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+Cleared directory 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+Submodule 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' (./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git) unregistered for path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % git status                                                  
+On branch main_minus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % cat .gitmodules 
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git config --list
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+work@umtiefs-Mac-mini main % rm -R appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+work@umtiefs-Mac-mini main % git status                                  
+On branch main_minus
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+work@umtiefs-Mac-mini main % git submodule deinit appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+work@umtiefs-Mac-mini main % cat .gitmodules                                            
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git commit -m "Third commit: remove [mm] module"
+On branch main_minus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git status                                                 
+On branch main_minus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git logpretty                                              
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_minus, main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git commit -m "Third commit: remove [mm] module"
+On branch main_minus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules -b main_plus             
+fatal: a branch named 'main_plus' already exists
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus 
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % ls -al                                        
+total 24
+drwxr-xr-x  16 work  staff   512 Jun 16 14:47 .
+drwxr-xr-x   3 work  staff    96 Jun 15 15:08 ..
+-rw-r--r--@  1 work  staff  6148 Jun 15 19:19 .DS_Store
+drwxr-xr-x  14 work  staff   448 Jun 16 14:54 .git
+-rw-r--r--   1 work  staff   441 Jun 16 14:47 .gitmodules
+drwxr-xr-x   3 work  staff    96 Jun 16 10:02 appl
+drwxr-xr-x   2 work  staff    64 Jun 16 10:00 cmake
+drwxr-xr-x   3 work  staff    96 Jun 16 08:18 del2_sub_dir_1
+drwxr-xr-x   3 work  staff    96 Jun 16 08:19 del3_sub_dir_1
+drwxr-xr-x   5 work  staff   160 Jun 15 16:46 del_sub_dir_1
+-rw-r--r--   1 work  staff     0 Jun 16 10:00 main_file.txt
+drwxr-xr-x   5 work  staff   160 Jun 15 18:23 main_new
+drwxr-xr-x   4 work  staff   128 Jun 15 16:46 move_dirs
+drwxr-xr-x   3 work  staff    96 Jun 16 08:20 sub_dir_1
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_2
+drwxr-xr-x   2 work  staff    64 Jun 15 15:09 sub_dir_3
+work@umtiefs-Mac-mini main % ls -al appl/layer 
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  2 work  staff   64 Jun 16 14:51 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git config --list
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; touch file_mm_2,txt )
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; rm file_mm_2,txt )
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; touch file_mm_2.txt; git status )
+On branch main_plus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../.DS_Store
+	../../../del2_sub_dir_1/
+	../../../del3_sub_dir_1/
+	../../../del_sub_dir_1/
+	../../../main_new/
+	../../../move_dirs/
+	../../../sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; ls -al; touch file_mm_2.txt; git status )
+total 0
+drwxr-xr-x  3 work  staff   96 Jun 16 14:57 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff    0 Jun 16 14:57 file_mm_2.txt
+On branch main_plus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../.DS_Store
+	../../../del2_sub_dir_1/
+	../../../del3_sub_dir_1/
+	../../../del_sub_dir_1/
+	../../../main_new/
+	../../../move_dirs/
+	../../../sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst; git status )
+On branch main
+nothing to commit, working tree clean
+work@umtiefs-Mac-mini main % git logpretty                                           
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_plus, main_minus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % ls -al appl/layer 
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  3 work  staff   96 Jun 16 14:57 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git submodule init appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+warning: could not look up configuration 'remote.origin.url'. Assuming this repository is its own authoritative upstream.
+Submodule 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' (/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git) registered for path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % git config --list                                                                 
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+work@umtiefs-Mac-mini main % git logpretty                                            
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_plus, main_minus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % ls -al appl/layer                                        
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  3 work  staff   96 Jun 16 14:57 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % cat .gitmodules 
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_minus                                      
+Switched to branch 'main_minus'
+work@umtiefs-Mac-mini main % ls -al appl/layer                           
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  3 work  staff   96 Jun 16 14:57 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+total 0
+drwxr-xr-x  3 work  staff   96 Jun 16 14:57 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff    0 Jun 16 14:58 file_mm_2.txt
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applgg_hh_ii                
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   63 Jun 16 14:47 .git
+-rw-r--r--  1 work  staff    0 Jun 16 14:47 appgg_file.txt
+work@umtiefs-Mac-mini main % git logpretty                                
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_minus, main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git config --list                                        
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+work@umtiefs-Mac-mini main % ls -al .git
+total 48
+drwxr-xr-x  14 work  staff   448 Jun 16 15:18 .
+drwxr-xr-x  16 work  staff   512 Jun 16 14:47 ..
+-rw-r--r--   1 work  staff    33 Jun 16 14:53 COMMIT_EDITMSG
+-rw-r--r--   1 work  staff    27 Jun 16 15:18 HEAD
+-rw-r--r--   1 work  staff    41 Jun 16 14:13 ORIG_HEAD
+-rw-r--r--   1 work  staff   590 Jun 16 15:14 config
+-rw-r--r--   1 work  staff    73 Jun 16 09:58 description
+drwxr-xr-x  15 work  staff   480 Jun 16 09:58 hooks
+-rw-r--r--   1 work  staff   588 Jun 16 15:18 index
+drwxr-xr-x   3 work  staff    96 Jun 16 09:58 info
+drwxr-xr-x   4 work  staff   128 Jun 16 11:01 logs
+drwxr-xr-x   3 work  staff    96 Jun 16 10:54 modules
+drwxr-xr-x  34 work  staff  1088 Jun 16 14:41 objects
+drwxr-xr-x   4 work  staff   128 Jun 16 09:58 refs
+work@umtiefs-Mac-mini main % git --version
+git version 2.39.3 (Apple Git-146)
+work@umtiefs-Mac-mini main % ls -al .git/modules 
+total 0
+drwxr-xr-x   3 work  staff   96 Jun 16 10:54 .
+drwxr-xr-x  14 work  staff  448 Jun 16 15:18 ..
+drwxr-xr-x   3 work  staff   96 Jun 16 10:54 appl
+work@umtiefs-Mac-mini main % ls -al .git/modules/appl/layer 
+total 0
+drwxr-xr-x   5 work  staff  160 Jun 16 14:30 .
+drwxr-xr-x   3 work  staff   96 Jun 16 10:54 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 15:18 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  12 work  staff  384 Jun 16 14:49 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  12 work  staff  384 Jun 16 15:18 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % ls -al .git/modules/appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+total 40
+drwxr-xr-x  12 work  staff  384 Jun 16 14:49 .
+drwxr-xr-x   5 work  staff  160 Jun 16 14:30 ..
+-rw-r--r--   1 work  staff   13 Jun 16 10:54 COMMIT_EDITMSG
+-rw-r--r--   1 work  staff   21 Jun 16 10:32 HEAD
+-rw-r--r--   1 work  staff  137 Jun 16 14:49 config
+-rw-r--r--   1 work  staff   73 Jun 16 10:32 description
+drwxr-xr-x  15 work  staff  480 Jun 16 10:32 hooks
+-rw-r--r--   1 work  staff  145 Jun 16 10:54 index
+drwxr-xr-x   3 work  staff   96 Jun 16 10:32 info
+drwxr-xr-x   4 work  staff  128 Jun 16 10:54 logs
+drwxr-xr-x   7 work  staff  224 Jun 16 10:54 objects
+drwxr-xr-x   4 work  staff  128 Jun 16 10:32 refs
+work@umtiefs-Mac-mini main % git submodule update --init                               
+Submodule path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst': checked out '5df889c67de114b8747bb46b9767520a19e96608'
+work@umtiefs-Mac-mini main % ls -al appl/layer/mpfw_fw2-applmm_nn_pp-0abst             
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 15:26 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:26 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 14:58 file_mm_2.txt
+work@umtiefs-Mac-mini main % git logpretty                                
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_minus, main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules
+M	appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+work@umtiefs-Mac-mini main % git logpretty                    
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_minus, main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules
+M	appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+work@umtiefs-Mac-mini main % git status                            
+On branch main_minus
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   appl/layer/mpfw_fw2-applmm_nn_pp-0abst (untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status )
+HEAD detached at 5df889c
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_mm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst; git status;  ) 
+On branch main
+nothing to commit, working tree clean
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout -b main; git status )
+fatal: a branch named 'main' already exists
+HEAD detached at 5df889c
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_mm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status ) 
+Switched to branch 'main'
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_mm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty )
+Already on 'main'
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_mm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al )
+Already on 'main'
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_mm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 15:26 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:26 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 14:58 file_mm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst ; git checkout main; git status; git logpretty; ls -al ) 
+Already on 'main'
+On branch main
+nothing to commit, working tree clean
+* e8c122235ea00b9f4388033e3ead261ca94e8378 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 11:00 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applgg_hh_ii ; git checkout main; git status; git logpretty; ls -al ) 
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* 69fe059d6aa81a919df336dde6230cd6a8b77b19 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   63 Jun 16 14:47 .git
+-rw-r--r--  1 work  staff    0 Jun 16 14:47 appgg_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al ) 
+Already on 'main'
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_mm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 15:26 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:26 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 14:58 file_mm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; rm file_mm_2.txt git status; git logpretty; ls -al )
+Already on 'main'
+rm: git: No such file or directory
+rm: status: No such file or directory
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:37 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:26 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; rm file_mm_2.txt; git status; git logpretty; ls -al )
+Already on 'main'
+rm: file_mm_2.txt: No such file or directory
+On branch main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:37 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:26 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al ) 
+Already on 'main'
+On branch main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:37 .
+drwxr-xr-x  5 work  staff  160 Jun 16 14:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:26 appmm_file.txt
+work@umtiefs-Mac-mini main % git logpretty
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_minus, main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git status
+On branch main_minus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git config --list
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+work@umtiefs-Mac-mini main % cat .gitmodules 
+[submodule "appl/layer/mpfw_fw2-applmm_nn_pp-0abst"]
+	path = appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+	url = ./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git rm appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+rm 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % cat .gitmodules                              
+[submodule "appl/layer/mpfw_fw2-applxx_yy_zz-0abst"]
+	path = appl/layer/mpfw_fw2-applxx_yy_zz-0abst
+	url = ./appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+[submodule "appl/layer/mpfw_fw2-applgg_hh_ii"]
+	path = appl/layer/mpfw_fw2-applgg_hh_ii
+	url = ./appl/layer/mpfw_fw2-applgg_hh_ii/.git
+work@umtiefs-Mac-mini main % git config --list                            
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+work@umtiefs-Mac-mini main % git status
+On branch main_minus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .gitmodules
+	deleted:    appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git commit -m "Third commit: remove [mm] module"
+[main_minus 482e072] Third commit: remove [mm] module
+ 2 files changed, 4 deletions(-)
+ delete mode 160000 appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+work@umtiefs-Mac-mini main % ls -al appl/layer                                                
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 15:42 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git lopretty
+git: 'lopretty' is not a git command. See 'git --help'.
+
+The most similar command is
+	logpretty
+work@umtiefs-Mac-mini main % git logpretty
+* 482e072b56c780f33393669f0042564d4cf66a82 (HEAD -> main_minus) Third commit: remove [mm] module
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % git logpretty                              
+* 482e072b56c780f33393669f0042564d4cf66a82 (main_minus) Third commit: remove [mm] module
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (HEAD -> main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % ls -al appl/layer                          
+total 0
+drwxr-xr-x  5 work  staff  160 Jun 16 15:44 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  4 work  staff  128 Jun 16 15:44 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; touch file_applmm_2.txt; git status; git logpretty; ls -al )
+HEAD detached at refs/heads/main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	file_applmm_2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD, main) First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 15:47 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:44 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:44 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:44 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 15:47 file_applmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; touch file_applmm_2.txt; git add .; git commit -m "Second commit"; git status; git logpretty; ls -al )
+[detached HEAD 27d9d37] Second commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file_applmm_2.txt
+HEAD detached from refs/heads/main
+nothing to commit, working tree clean
+* 27d9d37fb489fdac7e939c26de3bd5b1332fb201 (HEAD) Second commit
+* 5df889c67de114b8747bb46b9767520a19e96608 (main) First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 15:47 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:44 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:44 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:44 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 15:47 file_applmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al ) 
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  27d9d37 Second commit
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 27d9d37
+
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:48 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:44 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:44 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:44 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst; git status; git logpretty; ls -al )                           
+On branch main
+nothing to commit, working tree clean
+* e8c122235ea00b9f4388033e3ead261ca94e8378 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:44 ..
+-rw-r--r--  1 work  staff   69 Jun 16 11:00 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_minus                                                                                                      
+Switched to branch 'main_minus'
+work@umtiefs-Mac-mini main % git logpretty                                                                  
+* 482e072b56c780f33393669f0042564d4cf66a82 (HEAD -> main_minus) Third commit: remove [mm] module
+* 675afaddf4bf0bb149cdcf0873904d466988e286 (main_plus) Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus 
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applxx_yy_zz-0abst; git status; git logpretty; ls -al )
+On branch main
+nothing to commit, working tree clean
+* e8c122235ea00b9f4388033e3ead261ca94e8378 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 11:00 .git
+-rw-r--r--  1 work  staff    0 Jun 16 10:03 appxx_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al ) 
+HEAD detached at refs/heads/main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD, main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:51 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:51 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:51 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applgg_hh_ii; git status; git logpretty; ls -al ) 
+On branch main
+nothing to commit, working tree clean
+* 69fe059d6aa81a919df336dde6230cd6a8b77b19 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:51 ..
+-rw-r--r--  1 work  staff   63 Jun 16 14:47 .git
+-rw-r--r--  1 work  staff    0 Jun 16 14:47 appgg_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached at refs/heads/main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD, main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:51 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:51 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:51 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al )
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:51 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:51 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:51 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:51 appmm_file.txt
+work@umtiefs-Mac-mini main % git status                                                                                        
+On branch main_plus
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_minus                                                
+Switched to branch 'main_minus'
+work@umtiefs-Mac-mini main % ls -al appl/layer                           
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 15:55 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  4 work  staff  128 Jun 16 14:47 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                 
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )                   
+HEAD detached at refs/heads/main
+nothing to commit, working tree clean
+
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD, main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:59 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:59 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:59 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:59 appmm_file.txt
+work@umtiefs-Mac-mini main % 
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al )
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD -> main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 15:59 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:59 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:59 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:59 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; touch file_appmm_2.txt; git add .; git commit -m "Add a file .txt"; git status; git logpretty; ls -al )
+Already on 'main'
+[main 4f05124] Add a file .txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file_appmm_2.txt
+On branch main
+nothing to commit, working tree clean
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD -> main) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:01 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:59 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:59 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:59 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:01 file_appmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )                                                                    
+On branch main
+nothing to commit, working tree clean
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD -> main) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:01 .
+drwxr-xr-x  5 work  staff  160 Jun 16 15:59 ..
+-rw-r--r--  1 work  staff   69 Jun 16 15:59 .git
+-rw-r--r--  1 work  staff    0 Jun 16 15:59 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:01 file_appmm_2.txt
+work@umtiefs-Mac-mini main % git status
+On branch main_plus
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   appl/layer/mpfw_fw2-applmm_nn_pp-0abst (new commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+work@umtiefs-Mac-mini main % git add appl 
+work@umtiefs-Mac-mini main % git status  
+On branch main_plus
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git commit -m "Upd [mm] module "
+[main_plus ed48003] Upd [mm] module
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+work@umtiefs-Mac-mini main % git logpretty                                                                                                             
+* ed480037f638ae7d5fe30a1fe58bf710d6eaa172 (HEAD -> main_plus) Upd [mm] module
+| * 482e072b56c780f33393669f0042564d4cf66a82 (main_minus) Third commit: remove [mm] module
+|/  
+* 675afaddf4bf0bb149cdcf0873904d466988e286 Second commi: add [gg] module
+* 608efcb5fe88537b37569cf28dd3f04998702415 (main) First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_minus                                                                                                       
+Switched to branch 'main_minus'
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus 
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached from 5df889c
+nothing to commit, working tree clean
+
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD, main) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:03 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:03 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:03 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:03 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:03 file_appmm_2.txt
+work@umtiefs-Mac-mini main % 
+work@umtiefs-Mac-mini main % git checkout --recurse-submodles main_plus                                    
+error: unknown option `recurse-submodles'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge, diff3, or zdiff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_minus                                   
+Switched to branch 'main_minus'
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main                                         
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                    
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached from 5df889c
+nothing to commit, working tree clean
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD, main) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:08 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:08 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:08 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 file_appmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applgg_hh_ii; git status; git logpretty; ls -al ) 
+HEAD detached at refs/heads/main
+nothing to commit, working tree clean
+* 69fe059d6aa81a919df336dde6230cd6a8b77b19 (HEAD, main) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 16:08 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:08 ..
+-rw-r--r--  1 work  staff   63 Jun 16 16:08 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appgg_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al )                                                                    
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD -> main) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:08 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:08 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:08 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 file_appmm_2.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main                                                            
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al )
+Previous HEAD position was 5df889c First commit
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD -> main) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:20 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:20 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:20 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:20 file_appmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; touch file_appmm_3.txt; git add .; git commit -m "Add a file .txt"; git status; git logpretty; ls -al )
+Already on 'main'
+[main c41e20f] Add a file .txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file_appmm_3.txt
+On branch main
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (HEAD -> main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  6 work  staff  192 Jun 16 16:21 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:20 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:20 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:20 file_appmm_2.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:21 file_appmm_3.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                       
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )     
+HEAD detached at 4f05124
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:21 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:21 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:21 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:20 file_appmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout -b main_plus_sm; git status; git logpretty; ls -al )
+Switched to a new branch 'main_plus_sm'
+On branch main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD -> main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:21 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:21 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:21 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:20 file_appmm_2.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main                                                                 
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )                              
+HEAD detached from refs/heads/main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 16:25 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:25 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:25 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+work@umtiefs-Mac-mini main % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                                  
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached at refs/heads/main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD, main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:26 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:26 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:26 file_appmm_2.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main                                         
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached from refs/heads/main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 16:26 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:26 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al ) 
+Previous HEAD position was 5df889c First commit
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (HEAD -> main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  6 work  staff  192 Jun 16 16:27 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:26 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:26 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:27 file_appmm_2.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:27 file_appmm_3.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                       
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )                   
+HEAD detached from refs/heads/main
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD, main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:27 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:27 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:27 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:27 file_appmm_2.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main                                                            
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached from refs/heads/main
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 (HEAD) First commit
+total 8
+drwxr-xr-x  4 work  staff  128 Jun 16 16:27 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:27 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:27 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main; git status; git logpretty; ls -al )
+Previous HEAD position was 5df889c First commit
+Switched to branch 'main'
+On branch main
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (HEAD -> main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  6 work  staff  192 Jun 16 16:28 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:27 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:27 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:28 file_appmm_2.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:28 file_appmm_3.txt
+work@umtiefs-Mac-mini main % git status                                                                                        
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   appl/layer/mpfw_fw2-applmm_nn_pp-0abst (new commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+work@umtiefs-Mac-mini main % git add appl 
+work@umtiefs-Mac-mini main % git status                                                                                        
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	del2_sub_dir_1/
+	del3_sub_dir_1/
+	del_sub_dir_1/
+	main_new/
+	move_dirs/
+	sub_dir_1/
+
+work@umtiefs-Mac-mini main % git commit -m "Upd [mm] module"
+[main 20bffd0] Upd [mm] module
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+work@umtiefs-Mac-mini main % git logpretty                                                                                     
+* 20bffd0c2bc5249a508171e4768f3143ce89447a (HEAD -> main) Upd [mm] module
+| * ed480037f638ae7d5fe30a1fe58bf710d6eaa172 (main_plus) Upd [mm] module
+| | * 482e072b56c780f33393669f0042564d4cf66a82 (main_minus) Third commit: remove [mm] module
+| |/  
+| * 675afaddf4bf0bb149cdcf0873904d466988e286 Second commi: add [gg] module
+|/  
+* 608efcb5fe88537b37569cf28dd3f04998702415 First commit
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                       
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )                   
+HEAD detached from refs/heads/main
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD, main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:37 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:37 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:37 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:28 file_appmm_2.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git checkout main_plus_sm; git status; git logpretty; ls -al )
+Switched to branch 'main_plus_sm'
+On branch main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD -> main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 16:37 .
+drwxr-xr-x  5 work  staff  160 Jun 16 16:37 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:37 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:28 file_appmm_2.txt
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main                                                            
+Switched to branch 'main'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )                           
+HEAD detached from refs/heads/main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (HEAD, main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  6 work  staff  192 Jun 16 16:38 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:38 ..
+-rw-r--r--  1 work  staff   69 Jun 16 16:38 .git
+-rw-r--r--  1 work  staff    0 Jun 16 16:08 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:28 file_appmm_2.txt
+-rw-r--r--  1 work  staff    0 Jun 16 16:38 file_appmm_3.txt
+work@umtiefs-Mac-mini main % date
+Tue Jun 16 16:51:12 CEST 2026
+work@umtiefs-Mac-mini main % ls -al .git/modules/appl/layer 
+total 0
+drwxr-xr-x   5 work  staff  160 Jun 16 14:30 .
+drwxr-xr-x   3 work  staff   96 Jun 16 10:54 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git config --list                                                              
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+work@umtiefs-Mac-mini main % ls -al .git/modules/appl/layer
+total 0
+drwxr-xr-x   5 work  staff  160 Jun 16 14:30 .
+drwxr-xr-x   3 work  staff   96 Jun 16 10:54 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git submodule deinit appl/layer/mpfw_fw2-applmm_nn_pp-0abst
+Cleared directory 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+Submodule 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' (./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git) unregistered for path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % ls -al .git/modules/appl/layer                             
+total 0
+drwxr-xr-x   5 work  staff  160 Jun 16 14:30 .
+drwxr-xr-x   3 work  staff   96 Jun 16 10:54 ..
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applgg_hh_ii
+drwxr-xr-x  12 work  staff  384 Jun 16 16:58 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  12 work  staff  384 Jun 16 16:38 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % git config --list                                          
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+work@umtiefs-Mac-mini main % git config --list
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+work@umtiefs-Mac-mini main % git submodule init appl/layer/mpfw_fw2-applmm_nn_pp-0abst 
+warning: could not look up configuration 'remote.origin.url'. Assuming this repository is its own authoritative upstream.
+Submodule 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' (/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git) registered for path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % git config --list                                        
+credential.helper=osxkeychain
+init.defaultbranch=main
+protocol.file.allow=always
+user.name=work
+user.email=work@sonoma.macmini.local
+alias.logpretty=log --pretty=oneline --decorate --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applxx_yy_zz-0abst/.git
+submodule.appl/layer/mpfw_fw2-applxx_yy_zz-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applgg_hh_ii/.git
+submodule.appl/layer/mpfw_fw2-applgg_hh_ii.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.active=true
+submodule.appl/layer/mpfw_fw2-applmm_nn_pp-0abst.url=/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../.DS_Store
+	../../../del2_sub_dir_1/
+	../../../del3_sub_dir_1/
+	../../../del_sub_dir_1/
+	../../../main_new/
+	../../../move_dirs/
+	../../../sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 20bffd0c2bc5249a508171e4768f3143ce89447a (HEAD -> main) Upd [mm] module
+| * ed480037f638ae7d5fe30a1fe58bf710d6eaa172 (main_plus) Upd [mm] module
+| | * 482e072b56c780f33393669f0042564d4cf66a82 (main_minus) Third commit: remove [mm] module
+| |/  
+| * 675afaddf4bf0bb149cdcf0873904d466988e286 Second commi: add [gg] module
+|/  
+* 608efcb5fe88537b37569cf28dd3f04998702415 First commit
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 16:58 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:58 ..
+work@umtiefs-Mac-mini main % ls -al appl/layer 
+total 0
+drwxr-xr-x  4 work  staff  128 Jun 16 16:58 .
+drwxr-xr-x  3 work  staff   96 Jun 16 10:02 ..
+drwxr-xr-x  2 work  staff   64 Jun 16 16:58 mpfw_fw2-applmm_nn_pp-0abst
+drwxr-xr-x  4 work  staff  128 Jun 16 11:00 mpfw_fw2-applxx_yy_zz-0abst
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../.DS_Store
+	../../../del2_sub_dir_1/
+	../../../del3_sub_dir_1/
+	../../../del_sub_dir_1/
+	../../../main_new/
+	../../../move_dirs/
+	../../../sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 20bffd0c2bc5249a508171e4768f3143ce89447a (HEAD -> main) Upd [mm] module
+| * ed480037f638ae7d5fe30a1fe58bf710d6eaa172 (main_plus) Upd [mm] module
+| | * 482e072b56c780f33393669f0042564d4cf66a82 (main_minus) Third commit: remove [mm] module
+| |/  
+| * 675afaddf4bf0bb149cdcf0873904d466988e286 Second commi: add [gg] module
+|/  
+* 608efcb5fe88537b37569cf28dd3f04998702415 First commit
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 16:58 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:58 ..
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al )    
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 16:58 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:58 ..
+work@umtiefs-Mac-mini main % git submodule update appl/layer/mpfw_fw2-applmm_nn_pp-0abst                
+Submodule path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst': checked out 'c41e20fea2d69ee556211e812905ff7f0751d12f'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al )      
+total 8
+drwxr-xr-x  6 work  staff  192 Jun 16 17:37 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:58 ..
+-rw-r--r--  1 work  staff   69 Jun 16 17:37 .git
+-rw-r--r--  1 work  staff    0 Jun 16 17:37 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 17:37 file_appmm_2.txt
+-rw-r--r--  1 work  staff    0 Jun 16 17:37 file_appmm_3.txt
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+HEAD detached from refs/heads/main_plus_sm
+nothing to commit, working tree clean
+* c41e20fea2d69ee556211e812905ff7f0751d12f (HEAD, main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+total 8
+drwxr-xr-x  6 work  staff  192 Jun 16 17:37 .
+drwxr-xr-x  4 work  staff  128 Jun 16 16:58 ..
+-rw-r--r--  1 work  staff   69 Jun 16 17:37 .git
+-rw-r--r--  1 work  staff    0 Jun 16 17:37 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 17:37 file_appmm_2.txt
+-rw-r--r--  1 work  staff    0 Jun 16 17:37 file_appmm_3.txt
+work@umtiefs-Mac-mini main % git submodule deinit appl/layer/mpfw_fw2-applmm_nn_pp-0abst              
+Cleared directory 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+Submodule 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' (./appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git) unregistered for path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst; git status; git logpretty; ls -al )
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../.DS_Store
+	../../../del2_sub_dir_1/
+	../../../del3_sub_dir_1/
+	../../../del_sub_dir_1/
+	../../../main_new/
+	../../../move_dirs/
+	../../../sub_dir_1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+* 20bffd0c2bc5249a508171e4768f3143ce89447a (HEAD -> main) Upd [mm] module
+| * ed480037f638ae7d5fe30a1fe58bf710d6eaa172 (main_plus) Upd [mm] module
+| | * 482e072b56c780f33393669f0042564d4cf66a82 (main_minus) Third commit: remove [mm] module
+| |/  
+| * 675afaddf4bf0bb149cdcf0873904d466988e286 Second commi: add [gg] module
+|/  
+* 608efcb5fe88537b37569cf28dd3f04998702415 First commit
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 17:40 .
+drwxr-xr-x  4 work  staff  128 Jun 16 17:40 ..
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al )    
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 17:40 .
+drwxr-xr-x  4 work  staff  128 Jun 16 17:40 ..
+work@umtiefs-Mac-mini main % git checkout --recurse-submodules main_plus                                                               
+Switched to branch 'main_plus'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al )
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 17:40 .
+drwxr-xr-x  5 work  staff  160 Jun 16 17:42 ..
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al )
+total 0
+drwxr-xr-x  2 work  staff   64 Jun 16 17:40 .
+drwxr-xr-x  5 work  staff  160 Jun 16 17:42 ..
+work@umtiefs-Mac-mini main % git submodule init appl/layer/mpfw_fw2-applmm_nn_pp-0abst                      
+warning: could not look up configuration 'remote.origin.url'. Assuming this repository is its own authoritative upstream.
+Submodule 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst' (/Users/work/TempData/test_bash/main/appl/layer/mpfw_fw2-applmm_nn_pp-0abst/.git) registered for path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst'
+work@umtiefs-Mac-mini main % git submodule update appl/layer/mpfw_fw2-applmm_nn_pp-0abst                    
+Submodule path 'appl/layer/mpfw_fw2-applmm_nn_pp-0abst': checked out '4f05124b551e3f51cd89705a09308cd08f907287'
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al )    
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 18:21 .
+drwxr-xr-x  5 work  staff  160 Jun 16 17:42 ..
+-rw-r--r--  1 work  staff   69 Jun 16 18:21 .git
+-rw-r--r--  1 work  staff    0 Jun 16 18:21 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 18:21 file_appmm_2.txt
+work@umtiefs-Mac-mini main % 
+  [Restored 17 Jun 2026 at 07:12:10]
+Last login: Wed Jun 17 07:12:10 on ttys003
+Restored session: Tue Jun 16 20:52:21 CEST 2026
+work@umtiefs-Mac-mini main % (cd appl/layer/mpfw_fw2-applmm_nn_pp-0abst;  ls -al; git logpretty)
+total 8
+drwxr-xr-x  5 work  staff  160 Jun 16 18:21 .
+drwxr-xr-x  5 work  staff  160 Jun 16 17:42 ..
+-rw-r--r--  1 work  staff   69 Jun 16 18:21 .git
+-rw-r--r--  1 work  staff    0 Jun 16 18:21 appmm_file.txt
+-rw-r--r--  1 work  staff    0 Jun 16 18:21 file_appmm_2.txt
+* c41e20fea2d69ee556211e812905ff7f0751d12f (main) Add a file .txt
+* 4f05124b551e3f51cd89705a09308cd08f907287 (HEAD, main_plus_sm) Add a file .txt
+* 5df889c67de114b8747bb46b9767520a19e96608 First commit
+work@umtiefs-Mac-mini main %    

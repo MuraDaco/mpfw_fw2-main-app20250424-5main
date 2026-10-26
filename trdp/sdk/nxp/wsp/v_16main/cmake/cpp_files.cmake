@@ -32,5 +32,6 @@
         ${${CURR_MOD_NAME}_sdk_SRC_DIR}/other/cpp_config.cpp
         ${${CURR_MOD_NAME}_sdk_SRC_DIR}/other/freertos.c
         ${${CURR_MOD_NAME}_sdk_SRC_DIR}/other/semihost_hardfault.c
+        ${${CURR_MOD_NAME}_sdk_SRC_DIR}/other/startup_lpc54608.cpp
 
     )

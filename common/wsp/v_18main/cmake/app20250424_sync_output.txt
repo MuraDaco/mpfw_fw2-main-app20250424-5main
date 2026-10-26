@@ -1,0 +1,17 @@
+Fri 19 Jun 2026 16:31:18 CEST
+Performing the real synchronization ...
+
+building file list ... done
+cmake/mpfw_fw2_cmake/v_03/
+cmake/mpfw_fw2_cmake/v_03/macro/macro_init.cmake
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_16main/cmake/app20250424_archive.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_16main/cmake/app20250424_sync_output.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_16main/cmake/appl_app20250424_build_filtered_nxp.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_16main/cmake/appl_app20250424_files_n_dirs_nxp.txt
+scrp/build_platform_cmake2.sh
+trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp/src/v_06/libs/
+trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp/src/v_06/libs/libpower_hardabi.a
+trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp/src/v_06/libs/libpower_softabi.a
+
+sent 232487 bytes  received 208 bytes  465390.00 bytes/sec
+total size is 6693065  speedup is 28.76

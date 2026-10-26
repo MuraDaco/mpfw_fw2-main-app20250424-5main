@@ -33,6 +33,7 @@
 
 // lib include
 // ->> #include modules here ... <<-
+#include "krTimerManagerCmmn.h"
 #include "krTimerManager.h"
 #include "svStateMachineManager.h"
 #include "app_ManagerCmmn.h"

@@ -29,32 +29,23 @@
  */
 
 
-#include "app_Manager.h"
-#include "app_init.h"
-#include "krInitStaticWPManager.h"
 #include "krInitStaticManager.h"
-#include "krEndStaticManager.h"
+#include "krInitStaticWPManager.h"
 #include "krThreadManager.h"
+#include "krEndStaticManager.h"
 
 using namespace fw2::core::core;
 using namespace fw2::wrapper::core;
-using namespace mpfw::apps;
 
 int main(int argc, char *argv[])      {
 
     // ***************************************************************************
+    krInitStaticManager::LoopOnUnits();
+
+    // ***************************************************************************
     krInitStaticWPManager_t::LoopOnUnits(argc, argv);
-    //krInitStaticManager::LoopOnUnits();
-    //app_init::init(argc, argv);
-    
 
-    // rsSerial::Tx(rsSerial::endl);
-
-    // // ***************************************************************************
-    // rsSerial::Tx("START  - Threads definition and then run them"); rsSerial::Tx(rsSerial::endl);
-    // rsSerial::Tx(rsSerial::endl);
-    // // init_params_t l_initParams = {g_mcuId,g_shared_memory_reset};
-    // app_Manager_t::loop();
+    // ***************************************************************************
     krThreadManager_t::InitThenRun();
 
     // ***************************************************************************

@@ -1,0 +1,65 @@
+#   *******************************************************************************
+#   
+#   mpfw / fw2 - Multi Platform FirmWare FrameWork 
+#       library that contains the "main" entry point and, 
+#       eventualy, application code that is platform dependent
+#   Copyright (C) (2023) Marco Dau
+#   
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU Affero General Public License as published
+#   by the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#   
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU Affero General Public License for more details.
+#   
+#   You should have received a copy of the GNU Affero General Public License
+#   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#   
+#   You can contact me by the following email address
+#   marco <d o t> ing <d o t> dau <a t> gmail <d o t> com
+#   
+#   *******************************************************************************
+
+#### _______________________________________________________________
+## *** Section  0 - HOW_TO_USE
+
+    ## you must execute it before modifying PATH and only once
+    ## PATH_BKP=${PATH}
+    ##
+    ## PLATFORM_NAME=stm32f769_disco
+    ## MPFW_CODE_CMAKE_DIR=../../../../../../../../../cmake
+    ## BUILD_DIR=../../../build/${PLATFORM_NAME}
+    ## SRC_CFG=37
+    ##
+    ## NXP - PATH_TOOLCHAIN
+        ## IDE 11.5.1
+            ## PATH_TOOLCHAIN="/Applications/MCUXpressoIDE_11.5.1_7266/ide/tools/bin"
+            ## PATH_TOOLCHAIN="/Users/work/Tools/nxp/mcux_11_5_1/arm_toolchain/ver_10_3_2021_07/tools/bin"
+        ## IDE 11.9.1
+            ## PATH_TOOLCHAIN="/Applications/MCUXpressoIDE_11.9.1_2170/ide/plugins/com.nxp.mcuxpresso.tools.macosx_11.9.1.202402080819/tools/bin"
+            ## PATH_TOOLCHAIN="/Applications/MCUXpressoIDE_11.9.1_2170/ide/tools/bin"
+            ## PATH_TOOLCHAIN="/Users/work/Tools/nxp/mcux_11_9_1/arm_toolchain/ver_12_3_1_20230626/tools/bin"
+    ## STM32F769_DISCO - PATH_TOOLCHAIN
+        ## IDE 1_10_1
+            ## PATH_TOOLCHAIN="/Users/work/Applications/STM32_1_10_1/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.macos64_1.0.0.202111181127/tools/bin"
+            ## PATH_TOOLCHAIN="/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin"
+        ## IDE 1_15_1
+            ## PATH_TOOLCHAIN="/Users/work/Applications/STM32_1_15_1/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.macos64_1.0.100.202403111906/tools/bin"
+            ## PATH_TOOLCHAIN="/Users/work/Tools/stm/cube_1_15_1/arm_toolchain/ver_12_3_rel_1/tools/bin"
+    ## echo ${PATH_TOOLCHAIN}
+    ## export PATH=$PATH_TOOLCHAIN:$PATH_BKP
+    ##
+    ## PLATFORM_NAME=mac
+    ## cmake -S . -B ${BUILD_DIR} -G "Unix Makefiles" -DPLATFORM_NAME=${PLATFORM_NAME} -DEXTNL_LIB=N -DSRC_CFG=${SRC_CFG}
+    ## cmake -S . -B ${BUILD_DIR} -G "Unix Makefiles" -DPLATFORM_NAME=${PLATFORM_NAME} -DEXTNL_LIB=Y -DSRC_CFG=${SRC_CFG}
+    ##
+    ## PLATFORM_NAME=nxp
+    ## PLATFORM_NAME=stm32f769_disco
+    ## cmake -S . -B ${BUILD_DIR} -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=${MPFW_CODE_CMAKE_DIR}/arm-none-eabi-gcc.cmake -DPLATFORM_NAME=${PLATFORM_NAME} -DEXTNL_LIB=N -DSRC_CFG=${SRC_CFG}
+    ## cmake -S . -B ${BUILD_DIR} -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=${MPFW_CODE_CMAKE_DIR}/arm-none-eabi-gcc.cmake -DPLATFORM_NAME=${PLATFORM_NAME} -DEXTNL_LIB=Y -DSRC_CFG=${SRC_CFG}
+    ##
+    ## cmake --build ${BUILD_DIR} -j 1
+    ## cmake --build ${BUILD_DIR} --clean-first -j 1

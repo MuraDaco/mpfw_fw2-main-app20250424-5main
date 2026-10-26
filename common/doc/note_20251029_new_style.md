@@ -1,6 +1,212 @@
 
 ---
 
+Thu 18 Jun 2026 09:10:11 CEST
+
+- <<fare pulizia delle versioni dei moduli>
+    - rsync commands
+        - work@umtiefs-Mac-mini main % rsync -nav  --relative --files-from="main/app20260618/layer/mpfw_fw2-main-app20260618-5main/wsp/v_23main/cmake/file_to_archive.txt"  archive/app20260618/mpfw_code
+        - work@umtiefs-Mac-mini mpfw_code % rsync -nav --recursive --files-from="main/app20260618/layer/mpfw_fw2-main-app20260618-5main/wsp/v_23main/cmake/file_to_archive.txt" . archive/app20260618/mpfw_code 
+            - [--relative] options is implied
+
+
+---
+
+Tue 16 Jun 2026 08:53:23 CEST
+
+- <<fare pulizia delle versioni dei moduli>
+    - si devono gestire i files
+        - del codice sorgente
+        - del codice cmake
+    - inoltre pensare che i moduli radice non dovrebbero essere cancellati brutalmente perche sono dei submoduli git
+        - quindi si devonmo usare dei comandi specifici
+            - se si vuole eliminare un submodulo solo in uno specifico branch usare il comando
+                - git rm <path/to/submodule>
+            - se si vuole eliminare un submodulo per l'intera repository quindi per tutti i branch
+                - git submodules deinit
+            - git rm 
+
+......
+
+             Example cmd: rsync -a /home/me /home/you /dest
+              +/- pattern: /me/foo/bar
+              +/- pattern: /you/bar/baz
+              Target file: /dest/me/foo/bar
+              Target file: /dest/you/bar/baz
+
+              Example cmd: rsync -a /home/me/ /home/you/ /dest
+              +/- pattern: /foo/bar               (note missing "me")
+              +/- pattern: /bar/baz               (note missing "you")
+              Target file: /dest/foo/bar
+              Target file: /dest/bar/baz
+
+              Example cmd: rsync -a --relative /home/me/ /home/you /dest
+              +/- pattern: /home/me/foo/bar       (note full path)
+              +/- pattern: /home/you/bar/baz      (ditto)
+              Target file: /dest/home/me/foo/bar
+              Target file: /dest/home/you/bar/baz
+
+              Example cmd: cd /home; rsync -a --relative me/foo you/ /dest
+              +/- pattern: /me/foo/bar      (starts at specified path)
+              +/- pattern: /you/bar/baz     (ditto)
+              Target file: /dest/me/foo/bar
+              Target file: /dest/you/bar/baz
+
+
+......
+...... start from [/Users/work/ObsiData/repo__main/notes/note/git_help/note_20230912-git_command.md]
+
+---
+
+Tue Jun 16 16:51:12 CEST 2026
+
+- gestione submoduli
+    - per eliminare un submodulo in un branch specifico del padre del submodulo si deve usare il seguente comando
+        - git [rm] <path/to/submodule>
+            - questo comando 
+                - modifica il file .gitmodules eliminando la sezione del submodulo che si vuole cancellare
+                - elimina il submodulo eseguendo un comando bash "rm -R <path/to/submodule>"
+                - lasacia inalterato il file config della repository
+                    - per eliminare la sezione del submodulo dal file config si deve usare l'opzione deinit quindi il comando
+                        - git submodule [deinit] <path/to/submodule>
+                - non tocca la directory .git del super-project ed in particolare la directory .git/modules/
+                    - sembra non ci sia nessun comando git per eliminare la directory .git/modules/<path/to/submodule>
+                        - quindi bisogna eliminarla con il classico comando "rm -R"
+    - deinit / init
+        - quando viene eseguito il deinit la directory del submodulo 
+            - NON viene eliminata
+            - ma viene svuotata per tutti i branch 
+            - e come detto sopra viene eliminata la sezione del submodulo nel file config della repository del modulo padre
+        - per ripristinare il submodulo si devono usare i seguenti comandi
+            - git submodule [init] <path/to/submodule>
+                - aggiunge di nuovo il submodulo nel file config
+            - git submodule [update] <path/to/submodule>
+                - ripopola la directory del submodulo
+    - per eliminare completamente il submodulo
+        - vedere "Screenshot 2026-06-16 at 17-51-08 git - How do I remove a submodule - Stack Overflow.png"
+        - comandi da dare una sola volta in qualunque branch della repo
+            - 0. mv a/submodule a/submodule_tmp
+            - 1. git submodule deinit -f -- a/submodule    
+        - comandi da dare per ogni branch della repo
+            - 2. rm -rf .git/modules/a/submodule
+            - 3. git rm -f a/submodule
+        - N.B.: a/submodule (no trailing slash)
+
+            
+
+
+---
+...... end from [/Users/work/ObsiData/repo__main/notes/note/git_help/note_20230912-git_command.md]
+...... start - from <man git-rm>
+SUBMODULES
+       Only submodules using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will be removed from the work tree, as their repository lives inside the .git directory of
+       the superproject. If a submodule (or one of those nested inside it) still uses a .git directory, git rm will move the submodules git directory into the superprojects git directory to
+       protect the submodule’s history. If it exists the submodule.<name> section in the gitmodules(5) file will also be removed and that file will be staged (unless --cached or -n are used).
+
+       A submodule is considered up to date when the HEAD is the same as recorded in the index, no tracked files are modified and no untracked files that aren’t ignored are present in the
+       submodules work tree. Ignored files are deemed expendable and won’t stop a submodule’s work tree from being removed.
+
+       If you only want to remove the local checkout of a submodule from your work tree without committing the removal, use git-submodule(1) deinit instead. Also see gitsubmodules(7) for details
+       on submodule removal.
+...... end - from <man git-rm>
+
+...... start - from <man git-submodule>
+
+       deinit [-f|--force] (--all|[--] <path>...)
+           Unregister the given submodules, i.e. remove the whole submodule.$name section from .git/config together with their work tree. Further calls to git submodule update, git submodule
+           foreach and git submodule sync will skip any unregistered submodules until they are initialized again, so use this command if you don’t want to have a local checkout of the submodule
+           in your working tree anymore.
+
+           When the command is run without pathspec, it errors out, instead of deinit-ing everything, to prevent mistakes.
+
+           If --force is specified, the submodule’s working tree will be removed even if it contains local modifications.
+
+           If you really want to remove a submodule from the repository and commit that use git-rm(1) instead. See gitsubmodules(7) for removal options.
+
+
+       absorbgitdirs
+           If a git directory of a submodule is inside the submodule, move the git directory of the submodule into its superproject’s $GIT_DIR/modules path and then connect the git directory and
+           its working directory by setting the core.worktree and adding a .git file pointing to the git directory embedded in the superprojects git directory.
+
+           A repository that was cloned independently and later added as a submodule or old setups have the submodules git directory inside the submodule instead of embedded into the
+           superprojects git directory.
+
+           This command is recursive by default.
+
+
+...... end - from <man git-submodule>
+
+
+---
+
+Sat 13 Jun 2026 08:03:18 CEST
+
+- <<fare pulizia delle versioni dei moduli>
+    - si potrebbe usare il branch <main> dei moduli radice [root_modules]
+        - l'attuale branch <main> lo si può rinominare come <main_work> o <main_ref>
+            - questo significa dover aggiornare lo script [obdash] riguaerdo le funzioni di syncronizzazione dei branch
+    - il nuovo branch <main> conterrà 
+        - solo le versioni 
+            - dei moduli di codice
+            - e dei file cmake
+        - utilizzate nel build dell'applicazione
+        - solo i file doc che possono essere pubblicati e che quindi non contengomno informazioni private
+        - la procedura per ottenere questo branch potrebbe avere i seguenti steps
+            - <lista file .h e .cpp> avere una lista dei file .cpp/.h usati nel bnuild
+                - la lista dei file cmake coinvolti non dovrebbe esseere un problema
+            - creare una directory temporanea 
+                - da vedere se interna alla mpfw_code oppure esterna in $HOME/tmp
+            - dove spostare tutti i file della lista
+                - i file git
+                - i file della licenza
+            - eliminare il modulo radice
+            - ricreare la directory del modulo radice
+            - trasferire i file dalla dir temporanea alla directory del modulo rasdice
+                - capire se cè un comando di copia che crea le directory nel caso non esistano
+
+
+
+- <<documentazione per la correzione dei bugs>
+    - <Bug Fix - virtual hw process management>
+        - descrizione bug
+        - moduli coinvolti
+        - causa del bug
+        - descrizione modifica
+
+- <<documentazione per la correzione dei bugs>
+    - descrizione del problema
+    - aggiornamenti eseguiti
+        - moduli interesssati
+- <<documentazione dell applicazione>
+    - descrivere lo scopo dell'applicazione
+    - quali sono le procedure per vedere se tutto funziona come dovrebbe
+    - come compilare
+    - come eseguire il download sulla piattaforma reale
+
+- cose da fare nuove
+    - <archiviare gli ultimi aggiornamenti> per la correezione del bug relativo alla gestione dei processi
+    - <<documentazione dell applicazione> tenere un minimo di documentazione per come usare l'applicazione ed il suo scopo
+    - <<implementazione su piattaforme reali> far girare l'applicazione sulla piattaforma
+        - nxp
+            - la fase di build è ha un buon punto
+                - è stata chiusa una versione con un build
+                - adesso si deve svolgere l'attività delicata di controllare che le confiugurazioni relative all'haedware siano corrette
+            - nxp environment [MCUXpressoIDE]
+        - stm32f769_disco
+            - la fase di build è da fare, in particolare
+                - implementare i vari wrapper
+    - <<fare pulizioa delle versioni dei moduli>: creare una repository [mpfw_code] con i suoi submoduli pulita senza le versioni multiple dei submoduli
+    - <<github storage> controllare la [gmail] per vedere il report relativo allo storage di github
+
+- cose da fare VECCHIE
+    - fatto -> implementare il riordino in base alle priorità delle funzioni presenti negli array dei servizi
+        - cmake --help-command list
+    - fatto -> update github
+    - fatto -> update macco-bucco
+
+
+---
+
 Last login: Tue Apr 28 07:56:18 on ttys009
 
 - cose da fare
@@ -1483,6 +1689,7 @@ string is empty.
 3131313131 353637 3839303132333435363738393031323334356162636465666768696A6B6C6D6E6F707172737475767778797A000102030405060708090A0B0C0D0E0F101112131415 1111111
 
 01u|AAhffdsyte786dsghfd|
+01u|11cvuge78gpwqms|
 01u|BBffdsyte786dsghfd|
 123456789-01u|ghffdsyte786dsghfd|
 -1234-01u|xx_0_yeg__hermann|

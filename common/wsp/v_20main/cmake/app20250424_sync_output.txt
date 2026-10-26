@@ -1,0 +1,25 @@
+Mon 19 Oct 2026 16:55:45 CEST
+Performing the real synchronization ...
+
+building file list ... done
+appl/app20250424/layer/mpfw_fw2-appl-app20250424-4appl/common/
+fnct/base/layer/mpfw_fw2-fnct-base-0abst/
+fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst/
+fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst/src/empty/hw0Empty/v_01/hw0Empty.h
+fnct/base_hw/layer/mpfw_fw2-fnct-base_hw-0abst/wsp/v_01base_hw/cmake/include_files.cmake
+fnct/core/layer/mpfw_fw2-fnct-core-0abst/
+fnct/core/layer/mpfw_fw2-fnct-core-2wrpr/common/
+fnct/core/layer/mpfw_fw2-fnct-core-3real/
+fnct/hw/layer/mpfw_fw2-fnct-hw-1trdp-sdk-nxp/
+fnct/hw/layer/mpfw_fw2-fnct-hw-2wrpr-sdk/common/
+fnct/hw/layer/mpfw_fw2-fnct-hw-3real/
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_20main/cmake/app20250424_archive.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_20main/cmake/app20250424_sync_output.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_20main/cmake/appl_app20250424_build_filtered_nxp.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/common/wsp/v_20main/cmake/appl_app20250424_files_n_dirs_nxp.txt
+main/app20250424/layer/mpfw_fw2-main-app20250424-5main/trdp/sdk/nxp/src/
+trdp/sdk/nxp/layer/mpfw_fw2-trdp-sdk-nxp-0trdp/
+
+sent 137050 bytes  received 224 bytes  274548.00 bytes/sec
+total size is 6753675  speedup is 49.20

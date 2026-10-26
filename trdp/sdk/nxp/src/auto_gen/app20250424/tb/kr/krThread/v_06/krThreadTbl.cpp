@@ -33,9 +33,10 @@
 
 // lib include
 // ->> #include modules here ... <<-
-#include "krTimerManager.h"
+#include "krTimerManagerCmmn.h"
 #include "svStateMachineManager.h"
 #include "app_ManagerCmmn.h"
+#include "app_manager_nxp.h"
 
 namespace fw2 {namespace wrapper {namespace core	{
 
@@ -43,8 +44,8 @@ krThreadTbl::ThreadLoopFunction_t krThreadTbl::LoopFunctionArray[] = {
 
     // ->> list of pointer function here ... <<-
         PTR_TASK_OF_krThread_001_APPL_APP20250424_4APPL_thread_loopApp1,
+        PTR_TASK_OF_krThread_001_APPL_APP20250424_4APPL_thread_loopApp3,
         PTR_TASK_OF_krThread_001_FNCT_CORE_3REAL_KR_TIMER_LoopCheck,
-        PTR_TASK_OF_krThread_001_FNCT_CORE_3REAL_KR_TIMER_LoopUpdate,
         PTR_TASK_OF_krThread_002_APPL_APP20250424_4APPL_thread_loopApp2,
         PTR_TASK_OF_krThread_002_FNCT_CORE_3REAL_SV_STATE_MACHINE_LoopUpdate,
 
